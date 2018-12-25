@@ -117,3 +117,18 @@ class TrialEvaluation:
                 self.answer = 2
 
         return self.answer
+    
+        
+    def response_name(self, argument):
+        if argument == 0:
+            answer = 'No Answer'
+        if argument == 1:  
+            answer = "Hit";
+        if argument == 2: 
+            answer = "False Alarm";
+        if argument == 3: 
+            answer = "Correct Rejection";
+        if argument == 4:
+            answer = "Miss"
+               
+        return (answer)

@@ -49,7 +49,7 @@ class BuildMatrix:
             
         # assign the chosen pixelsize from the gui to the variable "rel_path"
         if self.variables.signal_picture == "A":
-            if self.variables.stimulus_size_pixels == "64x64":
+            if self.variables.stimulus_size_pixels == '64x64':
                 rel_path = "A64.jpg"
             if self.variables.stimulus_size_pixels == "128x128":
                 rel_path = "A128.jpg"

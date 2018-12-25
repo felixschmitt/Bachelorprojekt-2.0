@@ -35,7 +35,7 @@ class VarStore:
         self.session_number = self.gui.gui_input.data[1]
         self.experiment_type = self.gui.gui_input.data[2]
         # set trial composition depending on given task
-        if self.experiment_type == "Yes/No Task":
+        if self.experiment_type == "Yes-No Task":
             self.trial_composition = [1, 2, 3, 4, 5, 6]
         if self.experiment_type == "2IFC":
             self.trial_composition = [1, 2, 3, 2, 7, 8, 5, 6]
@@ -115,7 +115,7 @@ Guten Tag,
 
 
 # choose the text for the instruction depeding on the given task
-        if self.experiment_type == "Yes/No Task":
+        if self.experiment_type == "Yes-No Task":
             self.instruction2 = u"""
 Es werden Ihnen nun verschiedene Stimuli präsentiert.
 \nEinige Stimuli bestehen nur aus dem Störrauschen, andere bestehen aus dem Rauschen und dem zu entdeckenden Signal.

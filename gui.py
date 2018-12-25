@@ -40,7 +40,7 @@ class StateCheckIn:
         self.gui_input.addField(
             "Experimenttyp:",
             choices=[
-                "Yes/No Task",
+                "Yes-No Task",
                 "2IFC",
                 "4IFC",
                 "Constant Stimuli"])  # 2
@@ -56,9 +56,9 @@ class StateCheckIn:
         
         self.gui_input_var.addText("Einstellungen:")
 
-        self.gui_input_var.addField("Trialanzahl", 10)  # 0
-        self.gui_input_var.addField("Anzahl der Trialblocks", 5)  # 1
-        self.gui_input_var.addField("Anzahl der Testtrials", 5)  # 2
+        self.gui_input_var.addField("Trialanzahl", 3)  # 0
+        self.gui_input_var.addField("Anzahl der Trialblocks", 3)  # 1
+        self.gui_input_var.addField("Anzahl der Testtrials", 0)  # 2
         self.gui_input_var.addField("Dauer Fixationskreuz", 0.2)  # 3
         self.gui_input_var.addField("Dauer Maske:", 0.1)  # 4
         self.gui_input_var.addField("Dauer Stimulus", 0.2)  # 5
@@ -79,7 +79,7 @@ class StateCheckIn:
         # dont show the last 3 options for the constant stimuli task 
         if experiment_type == "Constant Stimuli":
             self.gui_input_var.show()
-        self.gui_input_var.addField("Kontrast - X je Trialblock", False)  # 13
+        self.gui_input_var.addField("Kontrast - X je Trialblock", True)  # 13
         self.gui_input_var.addField("Schrittweite", 0.5)  # 14
         self.gui_input_var.addField("Zufällig", False)  #15
         if experiment_type != "Constant Stimuli":
