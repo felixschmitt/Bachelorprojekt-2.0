@@ -7,6 +7,7 @@ Created on Sun Dec 09 17:17:11 2018
 
 from psychopy.misc import fromFile
 from psychopy import data
+import pandas as pd
 import sys 
 import os 
 import numpy
@@ -32,21 +33,66 @@ print(datFile.getExp())
 #### Experimenthandler 
 _thisDir = os.path.dirname(os.path.abspath(__file__)).decode(sys.getfilesystemencoding())
 filename_trial = _thisDir + os.sep + u'data/acker/Yes-No Task_2018_Dec_11_1409.psydat'
+filename_for_panda = _thisDir + os.sep + u'data/acker/Yes-No Task_2018_Dec_11_1409'
 datFile = fromFile(filename_trial)
 
 #print (datFile.extraInfo)
 print (datFile.dataFileName)
 print (datFile.dataNames)
 print (datFile.entries[1][u'response'])
-#print (datFile.get('response', default=None))
-#print (datFile.entries[2].items())
 
-#first = datFile.entries[2]
+######### Panda ##########
 
-#print (datFile.data['response'])
+filename_for_panda = _thisDir + os.sep + r'data\acker\Yes-No Task_2018_Dec_11_1409.csv'
+filename_for_panda_to_extend = _thisDir + os.sep + r'data\jolle\Yes-No Task_2018_Dec_11_1527.csv'
+df = pd.read_csv(filename_for_panda)
+#print (df)
+#### Plott numerical data
+#df['signal_intensity'].plot()
 
-#print(datFile._getAllParamNames())
-#dataread=datFile._getAllParamNames()
-#print(dataread[1][2])
+#### Automatically find all dataframes and put the name in FileNames
 
-#print(data_read[2])
+# List to hold file names
+FileNames = []
+
+# Your path will be different, please modify the path below.
+os.chdir(_thisDir + os.sep + r'data\lolo')
+
+# Find any file that ends with ".xlsx"
+for files in os.listdir("."):
+    if files.endswith(".csv"):
+        FileNames.append(files)
+        
+FileNames
+
+print FileNames
+
+#### Funktioniert 
+
+
+
+def GetFile(file_name):
+
+    # Path to excel file
+    # Your path will be different, please modify the path below.
+    location = _thisDir + os.sep + r'data/lolo/' + file_name
+    # Parse the excel file
+    # 0 = first sheet
+    df = pd.read_csv(location)
+    
+    # Tag record to file name
+    df['File'] = file_name
+    
+    # Make the "File" column the index of the df
+    return df.set_index(['File'])
+
+
+
+# Create a list of dataframes
+df_list = [GetFile(fname) for fname in FileNames]
+
+# Combine all of the dataframes into one
+big_df = pd.concat(df_list)
+print (big_df)
+
+big_df.to_csv('BigData.csv', index=False)

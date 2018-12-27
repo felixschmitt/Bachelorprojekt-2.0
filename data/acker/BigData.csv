@@ -1,0 +1,22 @@
+Signal Intensität,Task,Unnamed: 12,Unnamed: 8,date,expName,participant,response,session,signal_intensity,trials.thisIndex,trials.thisN,trials.thisRepN,trials.thisTrialN
+,,,,2018_Dec_11_1403,Yes-No Task,leon,,we,,,,,
+11.0,Yes-No Task,,,2018_Dec_11_1403,Yes-No Task,leon,Hit,we,11.0,0.0,-1.0,0.0,-1.0
+11.0,Yes-No Task,,,2018_Dec_11_1403,Yes-No Task,leon,False Alarm,we,11.0,0.0,-1.0,0.0,-1.0
+11.0,Yes-No Task,,,2018_Dec_11_1403,Yes-No Task,leon,Hit,we,11.0,0.0,-1.0,0.0,-1.0
+10.5,Yes-No Task,,,2018_Dec_11_1403,Yes-No Task,leon,Hit,we,10.5,0.0,0.0,0.0,0.0
+10.5,Yes-No Task,,,2018_Dec_11_1403,Yes-No Task,leon,Hit,we,10.5,0.0,1.0,1.0,0.0
+10.5,Yes-No Task,,,2018_Dec_11_1403,Yes-No Task,leon,Hit,we,10.5,0.0,2.0,2.0,0.0
+10.0,Yes-No Task,,,2018_Dec_11_1403,Yes-No Task,leon,False Alarm,we,10.0,0.0,0.0,0.0,0.0
+10.0,Yes-No Task,,,2018_Dec_11_1403,Yes-No Task,leon,Hit,we,10.0,0.0,1.0,1.0,0.0
+10.0,Yes-No Task,,,2018_Dec_11_1403,Yes-No Task,leon,Hit,we,10.0,0.0,2.0,2.0,0.0
+,,,,2018_Dec_11_1409,Yes-No Task,acker,,3,,,,,
+11.0,Yes-No Task,,,2018_Dec_11_1409,Yes-No Task,acker,Hit,3,11.0,0.0,0.0,0.0,0.0
+11.0,Yes-No Task,,,2018_Dec_11_1409,Yes-No Task,acker,Hit,3,11.0,0.0,1.0,1.0,0.0
+11.0,Yes-No Task,,,2018_Dec_11_1409,Yes-No Task,acker,Hit,3,11.0,0.0,2.0,2.0,0.0
+10.5,Yes-No Task,,,2018_Dec_11_1409,Yes-No Task,acker,Hit,3,10.5,0.0,0.0,0.0,0.0
+10.5,Yes-No Task,,,2018_Dec_11_1409,Yes-No Task,acker,Hit,3,10.5,0.0,1.0,1.0,0.0
+10.5,Yes-No Task,,,2018_Dec_11_1409,Yes-No Task,acker,Hit,3,10.5,0.0,2.0,2.0,0.0
+10.0,Yes-No Task,,,2018_Dec_11_1409,Yes-No Task,acker,False Alarm,3,10.0,0.0,0.0,0.0,0.0
+10.0,Yes-No Task,,,2018_Dec_11_1409,Yes-No Task,acker,Hit,3,10.0,0.0,1.0,1.0,0.0
+10.0,Yes-No Task,,,2018_Dec_11_1409,Yes-No Task,acker,False Alarm,3,10.0,0.0,2.0,2.0,0.0
+,,,,2018_Dec_11_1644,Yes-No Task,,,,,,,,

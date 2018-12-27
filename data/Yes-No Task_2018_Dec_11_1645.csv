@@ -1,0 +1,8 @@
+Task,Signal Intensität,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,signal_intensity,response,date,expName,session,participant,
+,,,,,,,,2018_Dec_11_1645,Yes-No Task,,hallo,
+Yes-No Task,11.0,0,0,0,0,11.0,False Alarm,2018_Dec_11_1645,Yes-No Task,,hallo,
+Yes-No Task,11.0,1,0,1,0,11.0,False Alarm,2018_Dec_11_1645,Yes-No Task,,hallo,
+Yes-No Task,11.0,2,0,2,0,11.0,Correct Rejection,2018_Dec_11_1645,Yes-No Task,,hallo,
+Yes-No Task,10.5,0,0,0,0,10.5,Miss,2018_Dec_11_1645,Yes-No Task,,hallo,
+Yes-No Task,10.5,1,0,1,0,10.5,Hit,2018_Dec_11_1645,Yes-No Task,,hallo,
+Yes-No Task,10.5,2,0,2,0,10.5,Correct Rejection,2018_Dec_11_1645,Yes-No Task,,hallo,
