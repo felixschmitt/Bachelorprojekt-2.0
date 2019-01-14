@@ -105,7 +105,7 @@ class VarStore:
         # checks if savefile already exist to prevent overwriting
 #        if os.path.exists(self.data_path):
 #            sys.exit("Datei " + self.data_path + " existiert bereits!")
-
+        self.picture_number = 1
         self.instruction = """
 Guten Tag,
 \ndas Experiment beginnt in Kürze.
