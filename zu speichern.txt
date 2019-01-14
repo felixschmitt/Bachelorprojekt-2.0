@@ -1,0 +1,37 @@
+EXPPERIMENT INFO (ein mal speichern?):
+bildschirmauflösung
+datum/zeit
+versuchsperson
+durchgang
+experimenttyp
+
+trial pro block
+anzahl trialblocks
+testtrials
+dauer fixationskreuz, maske, stimulus, antwort, feedback, pause
+stimulusgröße
+stimulusbild
+signalfarbe (bunt/sw)
+startintensität? (konstante intesität bei constant stimuli)
+mittelwert rauschen
+standardabweichung rauschen
+intensitätsabnahme pro block?
+zufällige intensitäten?
+(verteilung bei constant stimuli)
+
+ 
+PRO TRIAL (immer speichern):
+eingabe
+zeit bis eingabe
+stimulus vorhanden oder nicht
+stimulusintensität (auch wenn kein signal?)
+komplette matrix/bild
+
+
+
+
+TO-DO:
+psychometrische funktion
+bilder mit abspeichern 
+2ifc korrekt speichern
+optimale werte herausfinden
