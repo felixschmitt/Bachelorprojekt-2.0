@@ -42,6 +42,7 @@ class StateCheckIn:
             choices=[
                 "Yes-No Task",
                 "2IFC",
+                "2IFCnew",
                 "4IFC",
                 "Constant Stimuli"])  # 2
         self.gui_input.show()
@@ -59,12 +60,12 @@ class StateCheckIn:
         self.gui_input_var.addField("Trialanzahl", 100)  # 0
         self.gui_input_var.addField("Anzahl der Trialblocks", 3)  # 1
         self.gui_input_var.addField("Anzahl der Testtrials", 5)  # 2
-        self.gui_input_var.addField("Dauer Fixationskreuz", 0.1)  # 3
+        self.gui_input_var.addField("Dauer Fixationskreuz", 0.4)  # 3
         self.gui_input_var.addField("Dauer Maske:", 0.5)  # 4
         self.gui_input_var.addField("Dauer Stimulus", 0.1)  # 5
         self.gui_input_var.addField("Dauer Antwortperiode", 2)  # 6
         self.gui_input_var.addField("Dauer Feedback", 0.1)  # 7
-        self.gui_input_var.addField("Dauer Pause", 0.1)  # 8
+        self.gui_input_var.addField("Dauer Pause", 0.5)  # 8
         self.gui_input_var.addField("Stimulusgröße in Pixeln",
                                     choices=["64x64", "128x128", "256x256"])  # 9
         

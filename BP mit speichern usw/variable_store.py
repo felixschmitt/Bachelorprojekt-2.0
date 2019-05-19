@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 stores all the input variables from the gui so other classes can acces it
-
 """
 from __future__ import unicode_literals, division, print_function
 import os
@@ -39,6 +38,8 @@ class VarStore:
             self.trial_composition = [1, 6, 3, 4, 5, 6]
         if self.experiment_type == "2IFC":
             self.trial_composition = [1, 6, 3, 2, 7, 8, 5, 6]
+        if self.experiment_type == "2IFCnew":
+            self.trial_composition = [1, 6, 3, 4, 2, 7, 13 ,5 ,6]
         if self.experiment_type == "4IFC":
             self.trial_composition = [1, 2, 9, 2, 9, 2, 9, 2, 9, 10, 5, 6]
         if self.experiment_type == "Constant Stimuli":
@@ -142,6 +143,30 @@ Gleich startet das Experiment.
 \n[Weiter]"""
 
         if self.experiment_type == "2IFC":
+            self.instruction2 = u"""
+Im Experiment werden Ihnen immer zwei Stimuli in kurzer Folge präsentiert.
+\nEiner der beiden Stimuli besteht nur aus dem Störrauschen, der andere besteht immer aus dem Rauschen und dem zu entdeckenden Signal.
+\nIn der Mitte des Bildschirms wird Ihnen nun ein Stimulus mit Signal als Beispiel gezeigt.
+\nAls nächstes wird Ihnen nur das Störrauschen allein als Beispiel angezeigt.
+\n[Weiter]"""
+            self.instruction3 = u"""
+In der Mitte des Bildschirms wird Ihnen nun nur das Störrauschen angezeigt.
+\nSie haben im Folgenden die Aufgabe, anzugeben, ob das Signal im ersten oder im zweiten Stimulus angezeigt wurde.
+\nDazu drücken Sie, nachdem Sie beide Stimuli gesehen haben, "1" falls Sie das Signal im ersten vermuten, oder "2" falls Sie denken, es wäre im zweiten.
+\n[Weiter]"""
+            self.instruction4 = u"""
+Gleich startet das Experiment.
+\nZunächst wird Ihnen in der Mitte des Bildschirms ein Fixationskreuz angezeigt. Genau dort erscheint wenig später für kurze Zeit der erste Stimulus, gefolgt vom zweiten.
+\nNachdem der zweite Stimulus ausgeblendet wurde, startet die Antwortperiode.
+\nZur Erinnerung:
+\nFalls Sie das Signal in dem ersten Stimulus erkennen, drücken Sie bitte "1".
+\nFalls Sie das Signal in dem zweiten Stimulus erkennen, drücken Sie bitte "2".
+\nNach Ihrer Entscheidung erhalten Sie ein kurzes Feedback, ob ihre Wahl korrekt war: Ein grünes Kreuz bei richtiger Antwort und ein rotes bei einer falschen.
+\nDanach erscheint wieder das Fixationskreuz und ein neuer Durchgang startet.
+\nWenn Sie nun auf "w" drücken startet das Experiment. Wir empfehlen, Ihre Finger schon auf die entsprechenden Tasten zu legen.
+\n[Weiter]"""
+
+        if self.experiment_type == "2IFCnew":
             self.instruction2 = u"""
 Im Experiment werden Ihnen immer zwei Stimuli in kurzer Folge präsentiert.
 \nEiner der beiden Stimuli besteht nur aus dem Störrauschen, der andere besteht immer aus dem Rauschen und dem zu entdeckenden Signal.

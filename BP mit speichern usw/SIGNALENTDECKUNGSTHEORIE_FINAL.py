@@ -31,14 +31,6 @@ variables = VarStore()
 variables.init()
 
 
-
-#reload(sys)
-#sys.setdefaultencoding('utf8')
-
-# only if the gui button ok is pressed, the rest of the code will be executed
-#if not variables.gui.gui_input_var.OK:
-#    variables.gui.core.quit()
-
 ###### STOP #######
 
 # if the input of the second gui-page is done,
@@ -64,6 +56,7 @@ print(expInfo['date'])
 filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['participant'], expInfo['session'], exp_name, expInfo['date'])
 filename_trial = _thisDir + os.sep + u'data/%s/trialdata' % (expInfo['participant'])
 #u'data/%s_%s_%s'
+
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=exp_name, version='',
     extraInfo=expInfo, runtimeInfo=None,
@@ -78,25 +71,16 @@ logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a f
 
 
 
-#conditions=[]
-#for reps in range(variables.number_of_trials):
-##
-##anzahl der conditions (2IFC)
-##
-#    conditions.append({'label':str(reps)})
 ##
 conditions=[{'Task': expInfo['expName']}]
 
 
-#{'label':'low', 'startVal': 0.1, 'ori':90},
-#{'label':'high','startVal': 0.8, 'ori':90},
+
 
 conditions2=[
 ##L Array in array 
 {'label':'Signal Stärke'},
-#{'label':'high','startVal': 0.8, 'ori':45},
-#{'label':'low', 'startVal': 0.1, 'ori':90},
-#{'label':'high','startVal': 0.8, 'ori':90},
+
 ]
     
 trials = data.TrialHandler(nReps= variables.number_of_trials,
@@ -117,47 +101,14 @@ test_trials = data.TrialHandler(nReps=variables.testtrials, method='sequential',
 save_pic = []
 time_response = 0
 o = 0
-#trials.getOriginPathAndFile(originPath=None)
-#thisExp.addLoop(trials)
+
 thisExp.addLoop(test_trials)
-#trials.addData('image_factory.variables.signal_intensity',image_factory.variables.signal_intensity)
-#trials.addData('image_factory.variables.signal_intensity', 4)
-#trials.addData('variables.signal_picture',variables.signal_picture)
-#print(trials.data['variables.signal_intensity'])
+
 
 thisTrial = trials.trialList[0]
 thisTrial = test_trials.trialList[0]
 a=0
 current_trialblock = 0
-#print(trials.data['variables.signal_picture'])
-#trials._createOutputArray(stimOut = None, dataOut=('all_mean', 'all_std', 'all_raw'), delim=None, matrixOnly=False)
-
-#trials.extraInfo = {'SubjID': 'Joan Smith',
-#                                        'Group': 'Control'}
-#
-#class TrialHandler2(_BaseTrialHandler):
-#    """Class to handle trial sequencing and data storage.
-#
-#    Calls to .next() will fetch the next trial object given to this handler,
-#    according to the method specified (random, sequential, fullRandom).
-#    Calls will raise a StopIteration error if trials have finished.
-#
-#    See demo_trialHandler.py
-#
-#    The psydat file format is literally just a pickled copy of the
-#    TrialHandler object that saved it. You can open it with::
-#
-#            from psychopy.tools.filetools import fromFile
-#            dat = fromFile(path)
-#
-#    Then you'll find that `dat` has the following attributes that
-#    """
-#    
-######
-
-#thisExp.nextEntry()
-#thisExp.addData('response.keys',data)
-#thisExp.addData('response.corr', variables.name_testperson)
 
 # Array for the correct answers per Trialblock
 dataOld = []
@@ -185,7 +136,7 @@ def quit_exp(win):
     # make sure everything is closed down
     thisExp.abort()  # or data files will save again on exit
     ##### BETWEEN
-    core.wait(1)
+#    core.wait(1)
     win.close()
     core.quit()
 
@@ -305,14 +256,31 @@ def build_cross(cross_color):
 
     the cross has the size of 5 pixels in each direction
     '''
-    
-    fixationskreuz = visual.Rect(
-        win=window,
-        vertices=((0, -5), (0, 5), (0, 0), (-5, 0), (5, 0)),
-        lineWidth=10,
-        closeShape=False,
-        lineColor=cross_color
-    )
+      
+#    fixationskreuz = visual.Rect(
+#        win=window,
+#        vertices=((0, -5), (0, 5), (0, 0), (-5, 0), (5, 0)),
+#        lineWidth=10,
+#        closeShape=False,
+#        lineColor=cross_color
+#    )
+    if cross_color == "black":
+        fixationskreuz = visual.Rect(
+            win=window,            
+            width=5, 
+            height=5,
+            vertices=((0, -50), (0, 50), (0, 0), (-50, 0), (50, 0)),
+            lineWidth=30,
+            closeShape=True,
+            lineColor=cross_color)
+    else:
+        fixationskreuz = visual.Rect(
+            win=window,
+            vertices=((0, -5), (0, 5), (0, 0), (-5, 0), (5, 0)),
+            lineWidth=10,
+            closeShape=False,
+            lineColor=cross_color
+        )
     return fixationskreuz
 
 
@@ -385,6 +353,8 @@ has_stim_2 = not has_stim
 #current_image = create_image(has_stim)
 
 first_has_stim = True
+
+answer_given = False
 
 # to save the starting signal_intensity, initialized once at the start of the experiment
 # because variables.signal_intensity changes over time
@@ -555,7 +525,7 @@ for trial_blocks in range (variables.trial_blocks):
                     trialComponents = [image_factory.variables.signal_intensity]
                     #response_test_person
                     respone = response_test_person
-                    if (exp_name == "Yes-No Task"):
+                    if (exp_name == "Yes-No Task"or exp_name == "2IFCnew"):
                         response = response_evaluation.response_name(response_test_person)
                     else:
                         if response_test_person == 1:
@@ -579,6 +549,8 @@ for trial_blocks in range (variables.trial_blocks):
                     trials_loop.addData('signal_on_stimuluspos1', first_has_stim)
                     if exp_name == "2IFC":
                         trials_loop.addData('signal_on_stimuluspos2', not first_has_stim)
+                    if exp_name == "2IFC":
+                        trials_loop.addData('signal_on_stimuluspos2', not first_has_stim)
                     else:
                         trials_loop.addData('signal_on_stimuluspos2', - 1)
                     if (exp_name == "2IFC"):
@@ -587,18 +559,9 @@ for trial_blocks in range (variables.trial_blocks):
                     else:
                         trials_loop.addData('stimulus_name_pos1', 'stimulus_%s_%s_%s' % (expInfo['participant'], exp_name, expInfo['date']) + '_%s' % (variables.picture_number -1 ))
                         trials_loop.addData('stimulus_name_pos2', -1)
-#                    trials_loop.addData('noise_name', '%s_%s_%s' % (expInfo['participant'], exp_name, expInfo['date']) + '%s' % (variables.picture_number))
-#                    print(trials_loop.data['signal_intensity'])
-#                    print(trials_loop.data['response'])
+                        
                     thisExp.nextEntry()
-        #            if trials.trialList[a+1] < len(trials.trialList):
-        #                thisTrial = trials.trialList[a+1]
-        #            trials.addData('response.corr', response.corr)
-                    ### we need response of vpn
-        #            if response.keys != None:  # we had a response
-        #                trials.addData('response.rt', response.rt)
-                    # the Routine "trial" was not non-slip safe, so reset the non-slip timer
-#                    thisExp.nextEntry()
+
                     
                     ####
                     
@@ -709,39 +672,47 @@ for trial_blocks in range (variables.trial_blocks):
                         # clear the key input list
                         event.clearEvents()
                         answer_clock.reset()
-    
-                    # Event No
-                    if event.getKeys(keyList=["n"]):
-                        # "response_evaluation.get_answer_yes_no()" evaluates the answer of the
-                        # tested person and gives back 1-4 (hit, miss, correct rejection, 
-                        # false alarm), which is saved in "response_test_person"
-                        response_test_person = response_evaluation.get_answer_yes_no(
-                            False, has_stim)
-                        i = i + 1
-                        time_response= answer_clock.getTime()
-                        # unlock blocked(False) for next component
-                        blocked = False
-                        
-    
-                    # Event Yes
-                    if event.getKeys(keyList=["y"]):
-                        # "response_evaluation.get_answer_yes_no() evaluates the answer
-                        # of the tested person and gives back 1-4 (hit, miss, correct rejection,
-                        # false alarm), which is saved in "response_test_person"
-                        response_test_person = response_evaluation.get_answer_yes_no(
-                            True, has_stim)
-                        i = i + 1
-                        time_response= answer_clock.getTime()
-                        blocked = False
+                    
+                    if answer_given == False:
+                        # Event No
+                        if event.getKeys(keyList=["n"]):
+                            # "response_evaluation.get_answer_yes_no()" evaluates the answer of the
+                            # tested person and gives back 1-4 (hit, miss, correct rejection, 
+                            # false alarm), which is saved in "response_test_person"
+                            response_test_person = response_evaluation.get_answer_yes_no(
+                                False, has_stim)
+                            answer_given = True 
+                            time_response= answer_clock.getTime()
+                            # unlock blocked(False) for next component
+                            if exp_name != "2IFCnew":
+                                blocked = False
+                                i = i + 1
+        
+                        # Event Yes
+                        if event.getKeys(keyList=["y"]):
+                            # "response_evaluation.get_answer_yes_no() evaluates the answer
+                            # of the tested person and gives back 1-4 (hit, miss, correct rejection,
+                            # false alarm), which is saved in "response_test_person"
+                            response_test_person = response_evaluation.get_answer_yes_no(
+                                True, has_stim)
+                            answer_given = True 
+                            time_response= answer_clock.getTime()
+                            if exp_name != "2IFCnew":
+                                blocked = False
+                                i = i + 1
     
                     # Event no answer
                     if trial_clock.getTime() > frame_remains:
                         # response_test_person = 0 for no answer
-                        response_test_person = 0
+                        if exp_name != "2IFCnew":
+                            response_test_person = 0
+                            time_response= - 1
+                            
                         i = i + 1
                         blocked = False
+                        answer_given = False
                         ## -1 = no answer
-                        time_response= - 1
+                        
                         
 #                    print (time_response)
                     ##FEEDBACK##
@@ -1117,7 +1088,76 @@ for trial_blocks in range (variables.trial_blocks):
                         time_response= - 1
                         blocked = False
                 
-                
+                # if trial_composition[i] == 13, start answerperiod of the yes/no task
+                # this component gets an input of "y" for yes or "n" for no
+                # it evaluates the answer and saves it in "response_test_person"
+                if i < len(
+                        variables.trial_composition) and variables.trial_composition[i] == 13:
+    
+                    # initialize routine for trial-component
+                    if not blocked:
+                        frame_remains = trial_clock.getTime() + variables.time_answer - \
+                            window.monitorFramePeriod * 0.75
+                        blocked = True
+                        # clear the key input list
+                        event.clearEvents()
+                        answer_clock.reset()
+
+                    
+                    # Event No
+                    
+                        
+                    if answer_given == False:     
+                        if event.getKeys(keyList=["n"]):
+                            answer_given = True 
+                            if response_test_person == 2 or response_test_person == 3:
+                                # "response_evaluation.get_answer_yes_no()" evaluates the answer of the
+                                # tested person and gives back 1-4 (hit, miss, correct rejection, 
+                                # false alarm), which is saved in "response_test_person"
+                                response_test_person_second = response_evaluation.get_answer_yes_no(
+                                    False, has_stim)
+                                
+    #                            i = i + 1
+                                response_test_person = 2
+                                time_response= answer_clock.getTime()
+                            else:        
+                                response_test_person = 1
+                                time_response= answer_clock.getTime()
+                                # unlock blocked(False) for next component
+    #                            blocked = False
+                            
+        
+                        # Event Yes
+                        
+                        if event.getKeys(keyList=["y"]):
+                            # "response_evaluation.get_answer_yes_no() evaluates the answer
+                            # of the tested person and gives back 1-4 (hit, miss, correct rejection,
+                            # false alarm), which is saved in "response_test_person"
+                            answer_given = True 
+                            if response_test_person == 1 or response_test_person == 4:
+                                response_test_person_second = response_evaluation.get_answer_yes_no(
+                                    True, has_stim)
+    #                            i = i + 1
+                                
+                                response_test_person = 2
+                                time_response_second = answer_clock.getTime()
+    #                            blocked = False
+                            else:
+                                response_test_person = 1
+                                time_response_second = answer_clock.getTime()
+                    # Event no answer
+                    if trial_clock.getTime() > frame_remains:
+                        # response_test_person = 0 for no answer
+#                        response_test_person_second = 0
+                        i = i + 1
+                        blocked = False
+#                        if response_test_person == 1 or response_test_person == 3:
+                            
+                        ## -1 = no answer
+                        if answer_given == False :
+                            time_response_second = - 1     
+                            
+                        answer_given = False
                 # flip updates the screen continuously
                 window.flip()
     
@@ -1183,18 +1223,8 @@ for trial_blocks in range (variables.trial_blocks):
             countdown_clock = core.CountdownTimer(3.5)
             # dont draw testtrial_over_inst between 2 regular trialblocks
             testtrial_over_inst = False
-#                thisTrial = trials_loop.trialList[0]
-#            thisExp.loopEnded(trials_loop)
-#                thisExp.nextEntry
-#            thisExp.addLoop(trials_loop)# add the loop to the experiment
-#            trialList = conditions2
-                 # so we can initialise stimuli with some values
-#            thisExp.nextEntry()
-#            trials_loop = trials_2block
-#            thisTrial = trials.trialList[o]
-#            o = o+1
+
             
-#            thisExp.addLoop(trials_loop)
             
             ### INTENSITY DOWN CONDITION ###
 
@@ -1230,15 +1260,7 @@ for trial_blocks in range (variables.trial_blocks):
                     test_trial_over.draw()
                 window.flip()
         
-          #### evt löschen #####      
-#    filename_trial = _thisDir + os.sep + u'data/%s/trialdata%s' % (expInfo['participant'],trial_blocks)
-#    
-#    trials_loop.saveAsPickle(fileName= filename_trial)
-    
-#    trials_loop.saveAsExcel(fileName= filename_trial,
-#                  sheetName = 'rawData',
-#                  stimOut=[], 
-#                  dataOut=['all_raw'])
+
     
     conditions = [{'Task': expInfo['expName']}]  
     
@@ -1255,14 +1277,6 @@ for trial_blocks in range (variables.trial_blocks):
     thisTrial = trials_loop.trialList[0]       
     
 
-# put out the number of correct answers per trial in the console
-#print(save)
-
-## show the results with a graph in the console
-#plt.plot(save)
-#plt.ylim(0, variables.number_of_trials)
-#plt.xlim(0, variables.trial_blocks - 1)
-#plt.show()
 
 # terminates the program
 quit_exp(window)
