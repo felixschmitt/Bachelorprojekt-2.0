@@ -355,7 +355,12 @@ first_has_stim = True
 answer_given = False
 
 first_time = True
+
+time_response_second = 0
+
+answer2IFCnew = 0
     
+no_answer = True
 # to save the starting signal_intensity, initialized once at the start of the experiment
 # because variables.signal_intensity changes over time
 constant_value = variables.signal_intensity
@@ -441,6 +446,8 @@ thisExp.addLoop(trials_loop)
 display_answer_y = visual.TextStim(window, "y" , pos=[0, 50])
 display_answer_n = visual.TextStim(window, "n" , pos=[0, 50])
 display_answer_pending = visual.TextStim(window, "?" , pos=[0, 50])
+display_answer_to_slow = visual.TextStim(window, "zu langsam" , pos=[0, 50])
+display_answer_blocked =  visual.TextStim(window, "blockiert" , pos=[0, 50])
     
 if variables.random_intensity:
     
@@ -454,6 +461,10 @@ if variables.random_intensity:
     wert8 = 26
     
     list_of_intensities = [wert1,wert2,wert3,wert4,wert5,wert6,wert7,wert8]
+    new_signal_intensity = random.choice(list_of_intensities)
+    image_factory.variables.signal_intensity = new_signal_intensity
+    image_factory.refresh_signal_intensity()
+                    
 
 
 
@@ -554,7 +565,10 @@ for trial_blocks in range (variables.trial_blocks):
                             response = "correct answer"
                         if response_test_person == 2:
                             response  = "wrong answer"
-                    
+                    if (exp_name == "2IFCnew"):
+                        trials_loop.addData('time_response_second', time_response_second)
+                        trials_loop.addData('response_2IFCnew', answer2IFCnew)
+                        
                     if exp_name == "Constant Stimuli":
                         trials_loop.addData('signal_intensity', inconstant_value)
                     else:
@@ -569,13 +583,13 @@ for trial_blocks in range (variables.trial_blocks):
                     trials_loop.addData('response', response)
                     trials_loop.addData('time_response', time_response)
                     trials_loop.addData('signal_on_stimuluspos1', first_has_stim)
-                    if exp_name == "2IFC":
+                    if exp_name == "2IFC" or exp_name == "2IFCnew":
                         trials_loop.addData('signal_on_stimuluspos2', not first_has_stim)
-                    if exp_name == "2IFC":
-                        trials_loop.addData('signal_on_stimuluspos2', not first_has_stim)
+#                    if exp_name == "2IFC":
+#                        trials_loop.addData('signal_on_stimuluspos2', not first_has_stim)
                     else:
                         trials_loop.addData('signal_on_stimuluspos2', - 1)
-                    if (exp_name == "2IFC"):
+                    if (exp_name == "2IFC" or exp_name == "2IFCnew"):
                         trials_loop.addData('stimulus_name_pos1', 'stimulus%s_%s_%s' % (expInfo['participant'], exp_name, expInfo['date']) + '_%s' % (variables.picture_number - 2))
                         trials_loop.addData('stimulus_name_pos2', 'stimulus%s_%s_%s' % (expInfo['participant'], exp_name, expInfo['date']) + '_%s' % (variables.picture_number -1))
                     else:
@@ -584,8 +598,7 @@ for trial_blocks in range (variables.trial_blocks):
                         
                     thisExp.nextEntry()
 
-                    print (response_test_person)
-                    print (response_test_person_second)
+
                     ####
                     
                     ##Get redy for next trial
@@ -616,8 +629,8 @@ for trial_blocks in range (variables.trial_blocks):
                 if i < len(
                         variables.trial_composition) and variables.trial_composition[i] == 1:
                     
-                    draw_component = fixation_cross
-                    draw_component.setAutoDraw(True)
+#                    draw_component = fixation_cross
+#                    draw_component.setAutoDraw(True)
                     
                     # blocked indicates wether a component is running (blocked = True)
                     # or not (blocked = False); it also guarantees that "frame_remains"
@@ -628,6 +641,8 @@ for trial_blocks in range (variables.trial_blocks):
                         # because of the latency of the monitor
                         frame_remains = trial_clock.getTime() + variables.time_fixation_cross - \
                             window.monitorFramePeriod * 0.75
+                        draw_component = fixation_cross
+                        draw_component.setAutoDraw(True)
                         blocked = True
     
                     # if time for component is over, increase i (next component);
@@ -763,12 +778,24 @@ for trial_blocks in range (variables.trial_blocks):
                         if exp_name != "2IFCnew":
                             response_test_person = 0
                             time_response= - 1
-                            
-                        answer_given = False
-                        draw_component.setAutoDraw(False)
-                            
-                        i = i + 1
-                        blocked = False
+                            #if answer is not given, mark answer of testperson with 0
+                        if exp_name == "2IFCnew" and answer_given == False:
+                            draw_component.setAutoDraw(False)
+                            # blockiert den zweiten Interval
+                            response_test_person_second = 0
+                            response_test_person = 0
+                            time_response= - 1 
+                            draw_component = display_answer_to_slow
+                            draw_component.setAutoDraw(True)
+                            frame_remains = frame_remains + 0.2
+                            answer_given = True
+                        # wenn eine antwort gegeben wurde bzw. nicht der 2IFCnew task dran
+                        #war gehe weiter zur antwortanzeige, sonst anzeige zu langsam
+                        else:
+                            answer_given = False
+                            draw_component.setAutoDraw(False)
+                            i = i + 1
+                            blocked = False
                         
                         ## -1 = no answer
                         
@@ -792,13 +819,26 @@ for trial_blocks in range (variables.trial_blocks):
                     #safe response of first intervall in temp
                     if (exp_name == "2IFCnew"):
                         tempsave = response_test_person 
-                        response_test_person = response_test_person_second
+                        if response_test_person_second != 0:
+                            response_test_person = response_test_person_second
                         
-                    # assign response_test_person to a cross in the right color
-                    if response_test_person == 0:
-                        # no answer --> "specific_feedback" = black cross
-                        draw_component = fixation_cross
+
+                        
+                    
                     if first_time == True:
+                        
+                        
+                        # assign response_test_person to a cross in the right color
+                        
+                        # if its not the new experiment show that they were to slow
+                        if (exp_name != "2IFCnew"):
+                            if response_test_person == 0:
+                                # no answer --> "specific_feedback" = black cross
+                                draw_component = display_answer_to_slow
+                                # verlängerung der anzeige zu langsam
+                                frame_remains = frame_remains + variables.time_feedback
+                        
+                        
                         if response_test_person == 1 or response_test_person == 3:
                             # hit or correct rejection --> "specific_feedback" = green
                             # cross
@@ -898,6 +938,9 @@ for trial_blocks in range (variables.trial_blocks):
                         blocked = True
                         answer_clock.reset()
                         event.clearEvents()
+                        #draw ?
+                        draw_component = display_answer_pending
+                        draw_component.setAutoDraw(True)
     
                     # Event 1
                     if event.getKeys(keyList=["1"]):
@@ -908,6 +951,7 @@ for trial_blocks in range (variables.trial_blocks):
                         i = i + 1
                         time_response= answer_clock.getTime()
                         blocked = False
+                        draw_component.setAutoDraw(False)
     
                     # Event 2
                     if event.getKeys(keyList=["2"]):
@@ -918,6 +962,7 @@ for trial_blocks in range (variables.trial_blocks):
                         i = i + 1
                         time_response= answer_clock.getTime()
                         blocked = False
+                        draw_component.setAutoDraw(False)
     
                     # if answering time is over, assign 0 to "response_test_person"
                     if trial_clock.getTime() > frame_remains:
@@ -925,6 +970,7 @@ for trial_blocks in range (variables.trial_blocks):
                         i = i + 1
                         time_response= - 1
                         blocked = False
+                        draw_component.setAutoDraw(False)
     
                     ## STIMULUS 4IFC ##
     
@@ -1181,7 +1227,7 @@ for trial_blocks in range (variables.trial_blocks):
                         # clear the key input list
                         event.clearEvents()
                         answer_clock.reset()
-
+                        no_answer = True
                     
                     # Yes in first No prediction in second
                         if response_test_person == 1 or response_test_person == 2:
@@ -1194,92 +1240,127 @@ for trial_blocks in range (variables.trial_blocks):
                             display_answer_locked = display_answer_y
                             draw_component = display_answer_locked
                             draw_component.setAutoDraw(True)
-                    
+                        
+                        if response_test_person == 0:
+#                            frame_remains = frame_remains - (variables.time_answer /2)
+                            response_test_person_second = 0 
+                            time_response_second = -1
+                            draw_component = display_answer_blocked
+                            draw_component.setAutoDraw(True)
                     # Event No 
-#                    if answer_given == False:     
-                    if event.getKeys(keyList=["n"]):
-#                            answer_given = True 
-                        
-                        
-
-                            
-                        
-                        if response_test_person == 2 or response_test_person == 3:
-                            # "response_evaluation.get_answer_yes_no()" evaluates the answer of the
-                            # tested person and gives back 1-4 (hit, miss, correct rejection, 
-                            # false alarm), which is saved in "response_test_person"
-
-                            
-                            
-#                            i = i + 1
-#                            response_test_person = 2
-                            response_test_person_second = 2
-                            time_response= answer_clock.getTime()
-                            
-                        
-#                            if response_test_person == 2:
-#                                answer2IFCnew = 
-#                            else:
-                                
-                        else:        
-#                            response_test_person = 1
-                            response_test_person_second = 1
-                            time_response= answer_clock.getTime()
-                            
-                            # unlock blocked(False) for next component
-#                            blocked = False 
-                            
-                        if response_test_person == 3 or response_test_person == 4:
-                            draw_component.setAutoDraw(False)
-                            display_answer_locked = display_answer_n
-                            draw_component = display_answer_locked
-                            draw_component.setAutoDraw(True)
-                            frame_switch = True
-                            frame_remainsswitch = trial_clock.getTime() + variables.minimask - \
-                                window.monitorFramePeriod * 0.75
-                        else:
-                            i = i + 1
-                            blocked = False
-    #                        if response_test_person == 1 or response_test_person == 3:
-                            draw_component.setAutoDraw(False)
+                    # only evaluate if testperson gave a answer in the first interval
+                    if response_test_person != 0:
+                        if event.getKeys(keyList=["n"]):
+    #                            answer_given = True 
+                            no_answer = False
+                            time_response_second = answer_clock.getTime()
     
-                    # Event Yes
-                    
-                    if event.getKeys(keyList=["y"]):
-                        # "response_evaluation.get_answer_yes_no() evaluates the answer
-                        # of the tested person and gives back 1-4 (hit, miss, correct rejection,
-                        # false alarm), which is saved in "response_test_person"
-#                            answer_given = True 
-
-                        if response_test_person == 1 or response_test_person == 4:
-#                            i = i + 1
+                                
                             
-#                            response_test_person = 2
-                            response_test_person_second = 2
+                            if response_test_person == 2 or response_test_person == 3:
+                                # "response_evaluation.get_answer_yes_no()" evaluates the answer of the
+                                # tested person and gives back 1-4 (hit, miss, correct rejection, 
+                                # false alarm), which is saved in "response_test_person"
+    
+                                
+                                
+    #                            i = i + 1
+    #                            response_test_person = 2
+                                response_test_person_second = 2
+                                
+                                
+                                
+                                #False Alarm in first Interval (yes) and NO in second
+                                if response_test_person == 2:
+                                    answer2IFCnew = 3
+                                #Correct Rejection 3 (no first interval) and no second interval
+                                else:
+                                    answer2IFCnew = 8
+                                    
+                            else:        
+    #                            response_test_person = 1
+                                response_test_person_second = 1
+                                
+                                
+                                #first interval yes (Hit) second no changes opposite no
+                                if response_test_person == 1:
+                                    
+                                    answer2IFCnew = 1
+                                #first interval Miss (yes) and second intervall no changes 
+                                else:
+                                    answer2IFCnew = 6
+                                # unlock blocked(False) for next component
+    #                            blocked = False 
+                                
+                            if response_test_person == 3 or response_test_person == 4:
+                                draw_component.setAutoDraw(False)
+                                display_answer_locked = display_answer_n
+                                draw_component = display_answer_locked
+                                draw_component.setAutoDraw(True)
+                                frame_switch = True
+                                frame_remainsswitch = trial_clock.getTime() + variables.minimask - \
+                                    window.monitorFramePeriod * 0.75
+                            else:
+                                i = i + 1
+                                blocked = False
+        #                        if response_test_person == 1 or response_test_person == 3:
+                                draw_component.setAutoDraw(False)
+        
+                        # Event Yes
+                        
+                        if event.getKeys(keyList=["y"]):
+                            # "response_evaluation.get_answer_yes_no() evaluates the answer
+                            # of the tested person and gives back 1-4 (hit, miss, correct rejection,
+                            # false alarm), which is saved in "response_test_person"
+    #                            answer_given = True 
                             time_response_second = answer_clock.getTime()
-#                            blocked = False
-                        else:
-#                            response_test_person = 1
-                            response_test_person_second = 1
-                            time_response_second = answer_clock.getTime()
+                            no_answer = False
                             
+                            if response_test_person == 1 or response_test_person == 4:
+    #                            i = i + 1
+                                
+    #                            response_test_person = 2
+                                response_test_person_second = 2
+                                
+                                #Hit in first Interval (yes) and yes in second
+                                if response_test_person == 1:
+                                    answer2IFCnew = 7
+                                # Miss 4 (no first interval) and yes second interval
+                                else:
+                                    answer2IFCnew = 4
+    #                            blocked = False
+                            else:
+    #                            response_test_person = 1
+                                response_test_person_second = 1
                             
-                        #switch from yes to yes
-                        if response_test_person == 1 or response_test_person == 2:
-                            draw_component.setAutoDraw(False)
-                            display_answer_locked = display_answer_y
-                            draw_component = display_answer_locked
-                            draw_component.setAutoDraw(True)
-                            frame_switch=True
-                            frame_remainsswitch = trial_clock.getTime() + variables.minimask - \
-                                window.monitorFramePeriod * 0.75
-                        else:
-                            i = i + 1
-                            blocked = False
-                            draw_component.setAutoDraw(False)
+                                
+                                #FA in first Interval (yes) and yes in second
+                                if response_test_person == 2:
+                                    answer2IFCnew = 5
+                                #  3 CR(no first interval) and yes second interval
+                                else:
+                                    answer2IFCnew = 2
+                                
+                            #switch from yes to yes
+                            if response_test_person == 1 or response_test_person == 2:
+                                draw_component.setAutoDraw(False)
+                                display_answer_locked = display_answer_y
+                                draw_component = display_answer_locked
+                                draw_component.setAutoDraw(True)
+                                frame_switch=True
+                                frame_remainsswitch = trial_clock.getTime() + variables.minimask - \
+                                    window.monitorFramePeriod * 0.75
+                            else:
+                                i = i + 1
+                                blocked = False
+                                draw_component.setAutoDraw(False)
 #                        if response_test_person == 1 or response_test_person == 3:
-                            
-                            
+#                    print(answer2IFCnew)
+                                
+                    
+                                
+                
+                    print(answer2IFCnew)
                     ## if 2 times yes or no 
                     if frame_switch == True:
                         
@@ -1296,13 +1377,27 @@ for trial_blocks in range (variables.trial_blocks):
                     if trial_clock.getTime() > frame_remains:
                         # response_test_person = 0 for no answer
 #                        response_test_person_second = 0
+                        
+                        
                         i = i + 1
                         blocked = False
 #                        if response_test_person == 1 or response_test_person == 3:
                         draw_component.setAutoDraw(False)
-                        ## -1 = no answer
-                                           
-                        time_response_second = - 1     
+                        ## -1 = no answer and calculation  answer 2IFC if no change
+                        
+                        if no_answer == True:
+                            if response_test_person == 1:
+                                answer2IFCnew = 1
+                                
+                            elif response_test_person == 2:
+                                answer2IFCnew = 2
+                            elif response_test_person == 3:
+                                answer2IFCnew = 3
+                            elif response_test_person == 4:
+                                answer2IFCnew = 4
+                                
+                            time_response_second = - 1 
+                            no_answer = False
                         
                         #### minimaske
                 if i < len(
@@ -1347,15 +1442,7 @@ for trial_blocks in range (variables.trial_blocks):
 
         # else (no testtrials (left))
         else:
-            ############ pause zwischen blocks ###################
-            ######################################################
-            if trial_blocks + 1 < variables.trial_blocks:
-                block_inst.draw()
-                window.flip()
-                event.waitKeys(keyList=["w"])
-            ######################################################
-            ######################################################
-            
+
             # save the results of the last trialblock
             D = np.array(dataOld)
             # create a new array to save the results of the next trialblock
@@ -1384,7 +1471,20 @@ for trial_blocks in range (variables.trial_blocks):
             countdown_clock = core.CountdownTimer(3.5)
             # dont draw testtrial_over_inst between 2 regular trialblocks
             testtrial_over_inst = False
-
+            
+            
+            ############ pause zwischen blocks ###################
+            ######################################################
+            if trial_blocks + 1 < variables.trial_blocks:
+                block_inst.draw()
+                correctAnswers = "%i/%i, %g%% Korrekt"%(correct,variables.number_of_trials,  correct /variables.number_of_trials * 100)
+                display_score = visual.TextStim(window, correctAnswers , pos=[0, 150])
+                display_score.draw()
+                window.flip()
+                event.waitKeys(keyList=["w"])
+                
+            ######################################################
+            ######################################################
             
             
             ### INTENSITY DOWN CONDITION ###
