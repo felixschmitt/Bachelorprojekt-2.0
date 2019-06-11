@@ -1,0 +1,110 @@
+8 Eingabewerte
+speicherung
+text für neuen task
+? bei antwortperiode
+performance am ende von block
+Auswertungsklasse anpassen für 8 werte
+
+Fehler im Code:
+-testtrials?
+-keine antwort?
+
+
+
+        if self.experiment_type == "2IFCnew":
+            self.instruction2 = u"""
+Dieses Experiment ist eine Mischung aus den vorherigen. 
+\nWie beim 2IFC-Task, werden Ihnen immer zwei Stimuli in kurzer Folge präsentiert, von denen einer nur aus dem Störrauschen und der andere immer aus dem Rauschen und dem zu entdeckenden Signal besteht.
+\nIn der Mitte des Bildschirms wird Ihnen nun ein Stimulus mit Signal als Beispiel gezeigt.
+\nAls nächstes wird Ihnen nur das Störrauschen allein als Beispiel angezeigt.
+\n[Weiter]"""
+            self.instruction3 = u"""
+In der Mitte des Bildschirms wird Ihnen nun nur das Störrauschen angezeigt.
+\nSie haben im Folgenden die Aufgabe, für jeden der beiden Stimuli anzugeben, ob das Signal darin vorhanden war oder nicht.
+\nDazu drücken Sie, nachdem Sie den ersten gesehen haben, wie beim Yes-No-Task "y" falls Sie das Signal gesehen haben, oder "n" falls nicht.
+\n[Weiter]"""
+            self.instruction4 = u"""
+Da nur einer der beiden Stimuli das Signal enthält, setzt das Programm ihre Antwort für den zweiten Stimulus automatisch auf das Gegenteil der ersten Antwort.
+\nHaben Sie also angegeben, im ersten Stimulus das Signal erkannt zu haben, so ist Ihre Antwort für den zweiten Stimulus automatisch "No" und falls Sie es nicht gesehen haben, automatisch "Yes".
+\nSie können allerdings ihre Antwort ändern, indem Sie nach dem zweiten Stimulus erneut "y" oder "n" drücken, entsprechend dem was Sie darin erkannt haben.
+\nNach ihrer zweiten Antwort oder dem Ende der Anwortperiode, erhalten Sie das übliche Feedback. Danach erscheint wieder das Fixationskreuz und ein neuer Durchgang startet.
+
+\nFür das erfolgreiche Lösen ist es wichtig, dass Sie die Ihre Aufgabe komplett verstanden haben. Falls Sie noch Fragen haben, stellen Sie diese bitte dem Versuchsleiter.
+
+\nWenn Sie nun auf "w" drücken startet das Experiment. Wir empfehlen, Ihre Finger schon auf die entsprechenden Tasten zu legen.
+\n[Weiter]"""
+
+### \nDas heißt der Stimulus mit dem Signal kommt immer genau ein mal vor, entweder im ersten Interval oder im zweiten.
+
+Da nur einer der beiden Stimuli das Signal enthält, setzt das Programm ihre Antwort für den zweiten Stimulus automatisch auf das Gegenteil der ersten Antwort.
+\nHaben Sie also angegeben, im ersten Stimulus das Signal erkannt zu haben, so ist Ihre Antwort für den zweiten Stimulus automatisch "No" und falls Sie es nicht gesehen haben, automatisch "Yes".
+\nSollten Sie allerdings denken, dass das Signal doch im zweiten Stimulus war, obwohl Sie zuvor angegeben haben, dass es sich im ersten befindet, können Sie ihre vorherige Antwort überschreiben, indem Sie nach dem zweiten Stimulus "y" drücken.
+\nIm gegenteiligen Fall (beim ersten "No" gedrückt, nach zweitem gedacht es sei doch im ersten)
+
+
+
+
+
+        if self.experiment_type == "2IFCnew":
+            self.instruction2 = u"""
+Im Experiment werden Ihnen immer zwei Stimuli in kurzer Folge präsentiert.
+\nEiner der beiden Stimuli besteht nur aus dem Störrauschen, der andere besteht aus dem Rauschen und dem zu entdeckenden Signal.
+\nDas heißt der Stimulus mit dem Signal kommt immer genau ein mal vor, entweder im ersten Intervall oder im zweiten.
+\nIn der Mitte des Bildschirms wird Ihnen nun ein Stimulus mit Signal als Beispiel gezeigt.
+\nAls nächstes wird Ihnen nur das Störrauschen allein als Beispiel angezeigt.
+\n[Weiter]"""
+            self.instruction3 = u"""
+In der Mitte des Bildschirms wird Ihnen nun nur das Störrauschen angezeigt.
+\nSie haben im Folgenden die Aufgabe, nach jedem der Stimuli [also für jedes Intervall] anzugeben, ob das Signal darin vorhanden war, oder nicht.
+\nDazu drücken Sie, nachdem Sie den ersten Stimulus gesehen haben, "y" falls Sie denken, dass das Signal darin war, oder "n" falls nicht.
+\n[Weiter]"""
+            self.instruction4 = u"""
+Danach wird Ihnen der zweite Stimulus angezeigt und Sie können erneut antworten ob das Signal darin war oder nicht. 
+\nDas Programm setzt die zweite Antwort automatisch auf das Gegenteil der ersten Antwort, wenn Sie allerdings "y" oder "n" drücken, überschreiben Sie die zweite Antwort.
+\nDann erhalten Sie ein Feedback, ob Ihre zweite Antwort korrekt war: Ein grünes Kreuz wenn Sie richtig gelegen haben und ein rotes wenn falsch.
+\nDanach erscheint wieder das Fixationskreuz und ein neuer Durchgang startet.
+\nFür das erfolgreiche Lösen ist es wichtig, dass Sie die Ihre Aufgabe komplett verstanden haben. Falls Sie noch Fragen haben, stellen Sie diese bitte dem Versuchsleiter.
+\nWenn Sie nun auf "w" drücken startet das Experiment. Wir empfehlen, Ihre Finger schon auf die entsprechenden Tasten zu legen.
+\n[Weiter]"""
+
+
+
+Ablauf:
+
+0) Vor jedem neuen Task paar Durchgänge mit hoher Stärke zum reinkommen 
+
+1) Ermitteln psychometrischer Funktion
+- 8 blocks a 40 trials yes/no 
+- 1. block bei 10
+- bei schlechter performance danach höher, bei guter niedriger
+- abwechselnd verschiedene Signalstärken
+-> so wählen, dass performance nahe 100% (hohe Stärke) & nahe 50% (niedrige Stärke) dabei war
+
+2) Bestimmung der 65%, 75%, 85%-Werte
+- Auswertungsprogramm in Python 3.6 starten 
+- Signalstärken aus Konsole lesen
+
+3) Datenerhebung (Python 2.7)
+- Versuchsperson jeweils yes/no und 2IFC für die drei Werte absolvieren lassen
+- Reihenfolge: einfachster y/n -> einfachster 2ifc -> mittlerer y/n -> mittlerer 2ifc ...
+- in gui muss NICHTS geändert werden
+
+
+
+
+
+Bericht:
+- bilder übernander
+- präzise erklären was gemacht wurde
+- für sich selbst vor halbem jahr 
+- formeln 
+- code als anhang 
+
+
+
+- dprime verhältnisse 
+- vorhersage für psychometrische funktion
+- psychometrische zur kalibrierung 
+- bilder übereinander legen 
+
+                  
