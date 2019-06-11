@@ -1,0 +1,37 @@
+Ablauf:
+
+1) Ermitteln psychometrischer Funktion
+- 8 blocks a 40 trials yes/no 
+- 1. block bei 10
+- bei schlechter performance danach höher, bei guter niedriger
+- abwechselnd verschiedene Signalstärken
+-> so wählen, dass performance nahe 100% (hohe Stärke) & nahe 50% (niedrige Stärke) dabei war
+
+2) Bestimmung der 65%, 75%, 85%-Werte
+- Auswertungsprogramm in Python 3.6 starten 
+- Signalstärken aus Konsole lesen
+
+3) Datenerhebung (Python 2.7)
+- Versuchsperson jeweils yes/no und 2IFC für die drei Werte absolvieren lassen
+- Reihenfolge: einfachster y/n -> einfachster 2ifc -> mittlerer y/n -> mittlerer 2ifc ...
+- in gui muss NICHTS geändert werden
+
+
+
+
+
+Bericht:
+- bilder übernander
+- präzise erklären was gemacht wurde
+- für sich selbst vor halbem jahr 
+- formeln 
+- code als anhang 
+
+
+
+- dprime verhältnisse 
+- vorhersage für psychometrische funktion
+- psychometrische zur kalibrierung 
+- bilder übereinander legen 
+
+                  
