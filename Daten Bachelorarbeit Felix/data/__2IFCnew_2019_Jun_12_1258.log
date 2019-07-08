@@ -1,0 +1,550 @@
+10.8396 	EXP 	Created sequence: random, trialTypes=1, nReps=75, seed=None
+10.9880 	EXP 	Created sequence: sequential, trialTypes=1, nReps=0, seed=None
+11.0104 	WARNING 	Monitor specification not found. Creating a temporary one...
+12.2169 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([ 0.,  0.,  0.]), colorSpace='rgb', fullscr=UNKNOWN, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000000017238160>, multiSample=False, name='window1', numSamples=2, pos=[0, 0], screen=0, size=array([1920, 1080]), stereo=False, units=u'pix', useFBO=False, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType=u'pyglet')
+12.2171 	EXP 	Removed all global key events.
+12.2171 	EXP 	Added new global key event: quit through p
+12.2171 	EXP 	Added new global key event: quit through esc
+12.2805 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='Beenden...', units=u'pix', win=Window(...), wrapWidth=500)
+12.3367 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([   0.,  100.]), rgb=array([ 1.,  1.,  1.]), text=newstr(...), units=u'pix', win=Window(...), wrapWidth=500)
+12.3978 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 400.,    0.]), rgb=array([ 1.,  1.,  1.]), text=newstr(...), units=u'pix', win=Window(...), wrapWidth=500)
+12.4425 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 400.,    0.]), rgb=array([ 1.,  1.,  1.]), text=newstr(...), units=u'pix', win=Window(...), wrapWidth=500)
+12.5436 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text=newstr(...), units=u'pix', win=Window(...), wrapWidth=500)
+12.5598 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text=newstr(...), units=u'pix', win=Window(...), wrapWidth=500)
+12.5658 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([   0.,  100.]), rgb=array([ 1.,  1.,  1.]), text='Testtrial abgeschlossen', units=u'pix', win=Window(...), wrapWidth=500)
+12.5680 	EXP 	<method-wrapper '__getattribute__' of attributeSetter object at 0x000000000DBCBA58>: vertices = array([[-0.25,  0.25],
+       [ 0.25,  0.25],
+       [ 0.25, -0.25],
+       [-0.25, -0.25]])
+12.5690 	EXP 	Created unnamed Rect = Rect(autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=0, fillColor=None, fillColorSpace='rgb', fillRGB=None, interpolate=True, lineColor=u'lime', lineColorSpace='named', lineRGB=array([   0.,  255.,    0.]), lineWidth=10, name='unnamed Rect', opacity=1.0, ori=array(0.0), pos=array([ 0.,  0.]), size=array([ 1.,  1.]), units=u'pix', vertices=ndarray(...), win=Window(...))
+12.5693 	EXP 	<method-wrapper '__getattribute__' of attributeSetter object at 0x000000000DBCBA58>: vertices = array([[-0.25,  0.25],
+       [ 0.25,  0.25],
+       [ 0.25, -0.25],
+       [-0.25, -0.25]])
+12.5703 	EXP 	Created unnamed Rect = Rect(autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=0, fillColor=None, fillColorSpace='rgb', fillRGB=None, interpolate=True, lineColor=u'red', lineColorSpace='named', lineRGB=array([ 255.,    0.,    0.]), lineWidth=10, name='unnamed Rect', opacity=1.0, ori=array(0.0), pos=array([ 0.,  0.]), size=array([ 1.,  1.]), units=u'pix', vertices=ndarray(...), win=Window(...))
+12.5706 	EXP 	<method-wrapper '__getattribute__' of attributeSetter object at 0x000000000DBCBA58>: vertices = array([[-0.25,  0.25],
+       [ 0.25,  0.25],
+       [ 0.25, -0.25],
+       [-0.25, -0.25]])
+12.5716 	EXP 	Created unnamed Rect = Rect(autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=0, fillColor=None, fillColorSpace='rgb', fillRGB=None, interpolate=True, lineColor=u'black', lineColorSpace='named', lineRGB=array([ 0.,  0.,  0.]), lineWidth=10, name='unnamed Rect', opacity=1.0, ori=array(0.0), pos=array([ 0.,  0.]), size=array([ 1.,  1.]), units=u'pix', vertices=ndarray(...), win=Window(...))
+14.1213 	DATA 	Keypress: w
+14.1298 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+14.4253 	DATA 	Keypress: w
+14.4278 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+15.4653 	DATA 	Keypress: w
+16.1212 	DATA 	Keypress: w
+16.1263 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.1387 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.1757 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.2221 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.2555 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.2884 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.3218 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.3552 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.3886 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.4218 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.4552 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.4892 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.5220 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.5552 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.5886 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.6220 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.6554 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.6888 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.7234 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.7558 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.7888 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.8221 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.8554 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.8889 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.9221 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.9563 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+16.9891 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+17.0227 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+17.0557 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+17.0891 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+17.1224 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='3', units=u'pix', win=Window(...), wrapWidth=500)
+17.1572 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.1892 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.2225 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.2561 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.2901 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.3225 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.3565 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.3894 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.4227 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.4559 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.4894 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.5225 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.5561 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.5899 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.6227 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.6563 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.6894 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.7228 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.7563 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.7895 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.8228 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.8566 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.8896 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.9229 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.9569 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+17.9896 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+18.0231 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+18.0564 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+18.0897 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+18.1234 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='2', units=u'pix', win=Window(...), wrapWidth=500)
+18.1577 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.1896 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.2231 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.2568 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.2902 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.3230 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.3572 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.3903 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.4233 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.4565 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.4899 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.5232 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.5569 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.5901 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.6234 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.6568 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.6913 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.7235 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.7568 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.7901 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.8236 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.8569 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.8901 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.9235 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.9574 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+18.9906 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+19.0256 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+19.0571 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+19.0906 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+19.1239 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='1', units=u'pix', win=Window(...), wrapWidth=500)
+19.1585 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='0', units=u'pix', win=Window(...), wrapWidth=500)
+19.1906 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='0', units=u'pix', win=Window(...), wrapWidth=500)
+19.2236 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='0', units=u'pix', win=Window(...), wrapWidth=500)
+19.2578 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='0', units=u'pix', win=Window(...), wrapWidth=500)
+19.2904 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='0', units=u'pix', win=Window(...), wrapWidth=500)
+19.3238 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='0', units=u'pix', win=Window(...), wrapWidth=500)
+19.3577 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='0', units=u'pix', win=Window(...), wrapWidth=500)
+19.3906 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='0', units=u'pix', win=Window(...), wrapWidth=500)
+19.4238 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='0', units=u'pix', win=Window(...), wrapWidth=500)
+19.4573 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='0', units=u'pix', win=Window(...), wrapWidth=500)
+19.4905 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='0', units=u'pix', win=Window(...), wrapWidth=500)
+19.5240 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='0', units=u'pix', win=Window(...), wrapWidth=500)
+19.5576 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='0', units=u'pix', win=Window(...), wrapWidth=500)
+19.5907 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='0', units=u'pix', win=Window(...), wrapWidth=500)
+19.6241 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), rgb=array([ 1.,  1.,  1.]), text='0', units=u'pix', win=Window(...), wrapWidth=500)
+19.6575 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0.,  50.]), rgb=array([ 1.,  1.,  1.]), text='y', units=u'pix', win=Window(...), wrapWidth=500)
+19.6603 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0.,  50.]), rgb=array([ 1.,  1.,  1.]), text='n', units=u'pix', win=Window(...), wrapWidth=500)
+19.6646 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0.,  50.]), rgb=array([ 1.,  1.,  1.]), text='?', units=u'pix', win=Window(...), wrapWidth=500)
+19.6696 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0.,  50.]), rgb=array([ 1.,  1.,  1.]), text='zu langsam', units=u'pix', win=Window(...), wrapWidth=500)
+19.6798 	EXP 	Created unnamed TextStim = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=array([ 1.,  1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0.,  50.]), rgb=array([ 1.,  1.,  1.]), text='blockiert', units=u'pix', win=Window(...), wrapWidth=500)
+19.6828 	EXP 	New trial (rep=0, index=0): {u'Task': '2IFCnew'}
+19.6900 	EXP 	unnamed Rect: autoDraw = True
+19.8207 	EXP 	unnamed Rect: autoDraw = False
+20.0286 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+20.0542 	EXP 	Matrix: autoDraw = True
+20.1544 	EXP 	Matrix: autoDraw = False
+20.1544 	EXP 	unnamed TextStim: autoDraw = True
+20.5219 	DATA 	Keypress: y
+20.5546 	EXP 	unnamed TextStim: autoDraw = False
+20.5546 	EXP 	unnamed TextStim: autoDraw = True
+21.0567 	EXP 	unnamed TextStim: autoDraw = False
+21.1626 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+21.1896 	EXP 	Matrix: autoDraw = True
+21.2884 	EXP 	Matrix: autoDraw = False
+21.2884 	EXP 	unnamed TextStim: autoDraw = True
+22.1891 	EXP 	unnamed TextStim: autoDraw = False
+22.2300 	EXP 	unnamed Rect: autoDraw = True
+22.2559 	EXP 	unnamed Rect: autoDraw = True
+22.2894 	EXP 	unnamed Rect: autoDraw = True
+22.3227 	EXP 	unnamed Rect: autoDraw = True
+22.3227 	EXP 	unnamed Rect: autoDraw = False
+22.5567 	EXP 	unnamed Rect: autoDraw = True
+22.6565 	EXP 	unnamed Rect: autoDraw = False
+22.8639 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+22.8897 	EXP 	Matrix: autoDraw = True
+22.9897 	EXP 	Matrix: autoDraw = False
+22.9897 	EXP 	unnamed TextStim: autoDraw = True
+23.3236 	DATA 	Keypress: y
+23.3568 	EXP 	unnamed TextStim: autoDraw = False
+23.3568 	EXP 	unnamed TextStim: autoDraw = True
+23.8905 	EXP 	unnamed TextStim: autoDraw = False
+24.0010 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+24.0252 	EXP 	Matrix: autoDraw = True
+24.1246 	EXP 	Matrix: autoDraw = False
+24.1246 	EXP 	unnamed TextStim: autoDraw = True
+25.0279 	EXP 	unnamed TextStim: autoDraw = False
+25.0585 	EXP 	unnamed Rect: autoDraw = True
+25.0918 	EXP 	unnamed Rect: autoDraw = True
+25.1250 	EXP 	unnamed Rect: autoDraw = True
+25.1587 	EXP 	unnamed Rect: autoDraw = True
+25.1587 	EXP 	unnamed Rect: autoDraw = False
+25.3597 	EXP 	New trial (rep=1, index=0): {u'Task': '2IFCnew'}
+25.3919 	EXP 	unnamed Rect: autoDraw = True
+25.4940 	EXP 	unnamed Rect: autoDraw = False
+25.7001 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+25.7251 	EXP 	Matrix: autoDraw = True
+25.8262 	EXP 	Matrix: autoDraw = False
+25.8262 	EXP 	unnamed TextStim: autoDraw = True
+26.1925 	DATA 	Keypress: y
+26.2252 	EXP 	unnamed TextStim: autoDraw = False
+26.2252 	EXP 	unnamed TextStim: autoDraw = True
+26.7265 	EXP 	unnamed TextStim: autoDraw = False
+26.8342 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+26.8591 	EXP 	Matrix: autoDraw = True
+26.9595 	EXP 	Matrix: autoDraw = False
+26.9595 	EXP 	unnamed TextStim: autoDraw = True
+27.8604 	EXP 	unnamed TextStim: autoDraw = False
+27.8929 	EXP 	unnamed Rect: autoDraw = True
+27.9265 	EXP 	unnamed Rect: autoDraw = True
+27.9606 	EXP 	unnamed Rect: autoDraw = True
+27.9930 	EXP 	unnamed Rect: autoDraw = True
+27.9930 	EXP 	unnamed Rect: autoDraw = False
+28.1937 	EXP 	New trial (rep=2, index=0): {u'Task': '2IFCnew'}
+28.2267 	EXP 	unnamed Rect: autoDraw = True
+28.3267 	EXP 	unnamed Rect: autoDraw = False
+28.5372 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+28.5601 	EXP 	Matrix: autoDraw = True
+28.6604 	EXP 	Matrix: autoDraw = False
+28.6604 	EXP 	unnamed TextStim: autoDraw = True
+29.0942 	DATA 	Keypress: y
+29.1270 	EXP 	unnamed TextStim: autoDraw = False
+29.1270 	EXP 	unnamed TextStim: autoDraw = True
+29.5608 	EXP 	unnamed TextStim: autoDraw = False
+29.6697 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+29.6941 	EXP 	Matrix: autoDraw = True
+29.7945 	EXP 	Matrix: autoDraw = False
+29.7945 	EXP 	unnamed TextStim: autoDraw = True
+30.4621 	DATA 	Keypress: n
+30.4946 	EXP 	unnamed TextStim: autoDraw = False
+30.5281 	EXP 	unnamed Rect: autoDraw = True
+30.5618 	EXP 	unnamed Rect: autoDraw = True
+30.5948 	EXP 	unnamed Rect: autoDraw = True
+30.6281 	EXP 	unnamed Rect: autoDraw = True
+30.6281 	EXP 	unnamed Rect: autoDraw = False
+30.6957 	DATA 	Keypress: y
+30.8288 	EXP 	New trial (rep=3, index=0): {u'Task': '2IFCnew'}
+30.8614 	EXP 	unnamed Rect: autoDraw = True
+30.9644 	EXP 	unnamed Rect: autoDraw = False
+31.0620 	DATA 	Keypress: y
+31.1699 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+31.1951 	EXP 	Matrix: autoDraw = True
+31.2953 	EXP 	Matrix: autoDraw = False
+31.2953 	EXP 	unnamed TextStim: autoDraw = True
+31.7959 	DATA 	Keypress: y
+31.8289 	EXP 	unnamed TextStim: autoDraw = False
+31.8289 	EXP 	unnamed TextStim: autoDraw = True
+32.1958 	EXP 	unnamed TextStim: autoDraw = False
+32.3038 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+32.3293 	EXP 	Matrix: autoDraw = True
+32.4292 	EXP 	Matrix: autoDraw = False
+32.4292 	EXP 	unnamed TextStim: autoDraw = True
+32.9300 	DATA 	Keypress: n
+32.9630 	EXP 	unnamed TextStim: autoDraw = False
+32.9963 	EXP 	unnamed Rect: autoDraw = True
+33.0297 	EXP 	unnamed Rect: autoDraw = True
+33.0633 	EXP 	unnamed Rect: autoDraw = True
+33.0965 	EXP 	unnamed Rect: autoDraw = True
+33.0965 	EXP 	unnamed Rect: autoDraw = False
+33.2982 	EXP 	New trial (rep=4, index=0): {u'Task': '2IFCnew'}
+33.3312 	EXP 	unnamed Rect: autoDraw = True
+33.4302 	EXP 	unnamed Rect: autoDraw = False
+33.6385 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+33.6632 	EXP 	Matrix: autoDraw = True
+33.7633 	EXP 	Matrix: autoDraw = False
+33.7633 	EXP 	unnamed TextStim: autoDraw = True
+34.4645 	DATA 	Keypress: y
+34.4975 	EXP 	unnamed TextStim: autoDraw = False
+34.4975 	EXP 	unnamed TextStim: autoDraw = True
+34.6639 	EXP 	unnamed TextStim: autoDraw = False
+34.7725 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+34.7975 	EXP 	Matrix: autoDraw = True
+34.8979 	EXP 	Matrix: autoDraw = False
+34.8979 	EXP 	unnamed TextStim: autoDraw = True
+35.4315 	DATA 	Keypress: n
+35.4664 	EXP 	unnamed TextStim: autoDraw = False
+35.4981 	EXP 	unnamed Rect: autoDraw = True
+35.5312 	EXP 	unnamed Rect: autoDraw = True
+35.5647 	EXP 	unnamed Rect: autoDraw = True
+35.5980 	EXP 	unnamed Rect: autoDraw = True
+35.5980 	EXP 	unnamed Rect: autoDraw = False
+35.7988 	EXP 	New trial (rep=5, index=0): {u'Task': '2IFCnew'}
+35.8315 	EXP 	unnamed Rect: autoDraw = True
+35.9323 	EXP 	unnamed Rect: autoDraw = False
+36.1393 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+36.1651 	EXP 	Matrix: autoDraw = True
+36.2652 	EXP 	Matrix: autoDraw = False
+36.2652 	EXP 	unnamed TextStim: autoDraw = True
+36.6659 	DATA 	Keypress: y
+36.6987 	EXP 	unnamed TextStim: autoDraw = False
+36.6987 	EXP 	unnamed TextStim: autoDraw = True
+37.1657 	EXP 	unnamed TextStim: autoDraw = False
+37.2753 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+37.2992 	EXP 	Matrix: autoDraw = True
+37.3996 	EXP 	Matrix: autoDraw = False
+37.3996 	EXP 	unnamed TextStim: autoDraw = True
+37.6998 	DATA 	Keypress: n
+37.7327 	EXP 	unnamed TextStim: autoDraw = False
+37.7661 	EXP 	unnamed Rect: autoDraw = True
+37.7996 	EXP 	unnamed Rect: autoDraw = True
+37.8326 	EXP 	unnamed Rect: autoDraw = True
+37.8663 	EXP 	unnamed Rect: autoDraw = True
+37.8663 	EXP 	unnamed Rect: autoDraw = False
+38.0670 	EXP 	New trial (rep=6, index=0): {u'Task': '2IFCnew'}
+38.0995 	EXP 	unnamed Rect: autoDraw = True
+38.1997 	EXP 	unnamed Rect: autoDraw = False
+38.4080 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+38.4333 	EXP 	Matrix: autoDraw = True
+38.5331 	EXP 	Matrix: autoDraw = False
+38.5331 	EXP 	unnamed TextStim: autoDraw = True
+38.9678 	DATA 	Keypress: y
+39.0010 	EXP 	unnamed TextStim: autoDraw = False
+39.0010 	EXP 	unnamed TextStim: autoDraw = True
+39.4353 	EXP 	unnamed TextStim: autoDraw = False
+39.5418 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+39.5672 	EXP 	Matrix: autoDraw = True
+39.6674 	EXP 	Matrix: autoDraw = False
+39.6674 	EXP 	unnamed TextStim: autoDraw = True
+40.0358 	DATA 	Keypress: n
+40.0682 	EXP 	unnamed TextStim: autoDraw = False
+40.1022 	EXP 	unnamed Rect: autoDraw = True
+40.1356 	EXP 	unnamed Rect: autoDraw = True
+40.1684 	EXP 	unnamed Rect: autoDraw = True
+40.2021 	EXP 	unnamed Rect: autoDraw = True
+40.2021 	EXP 	unnamed Rect: autoDraw = False
+40.4043 	EXP 	New trial (rep=7, index=0): {u'Task': '2IFCnew'}
+40.4362 	EXP 	unnamed Rect: autoDraw = True
+40.5353 	EXP 	unnamed Rect: autoDraw = False
+40.7448 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+40.7690 	EXP 	Matrix: autoDraw = True
+40.8694 	EXP 	Matrix: autoDraw = False
+40.8694 	EXP 	unnamed TextStim: autoDraw = True
+41.3038 	DATA 	Keypress: y
+41.3357 	EXP 	unnamed TextStim: autoDraw = False
+41.3357 	EXP 	unnamed TextStim: autoDraw = True
+41.7687 	EXP 	unnamed TextStim: autoDraw = False
+41.8774 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+41.9019 	EXP 	Matrix: autoDraw = True
+42.0027 	EXP 	Matrix: autoDraw = False
+42.0027 	EXP 	unnamed TextStim: autoDraw = True
+42.2361 	DATA 	Keypress: n
+42.2691 	EXP 	unnamed TextStim: autoDraw = False
+42.3026 	EXP 	unnamed Rect: autoDraw = True
+42.3361 	EXP 	unnamed Rect: autoDraw = True
+42.3691 	EXP 	unnamed Rect: autoDraw = True
+42.4031 	EXP 	unnamed Rect: autoDraw = True
+42.4031 	EXP 	unnamed Rect: autoDraw = False
+42.6031 	EXP 	New trial (rep=8, index=0): {u'Task': '2IFCnew'}
+42.6359 	EXP 	unnamed Rect: autoDraw = True
+42.7359 	EXP 	unnamed Rect: autoDraw = False
+42.9437 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+42.9703 	EXP 	Matrix: autoDraw = True
+43.0753 	EXP 	Matrix: autoDraw = False
+43.0753 	EXP 	unnamed TextStim: autoDraw = True
+43.6718 	DATA 	Keypress: y
+43.7050 	EXP 	unnamed TextStim: autoDraw = False
+43.7050 	EXP 	unnamed TextStim: autoDraw = True
+43.9730 	EXP 	unnamed TextStim: autoDraw = False
+44.0833 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+44.1056 	EXP 	Matrix: autoDraw = True
+44.2052 	EXP 	Matrix: autoDraw = False
+44.2052 	EXP 	unnamed TextStim: autoDraw = True
+44.4045 	DATA 	Keypress: n
+44.4370 	EXP 	unnamed TextStim: autoDraw = False
+44.4705 	EXP 	unnamed Rect: autoDraw = True
+44.5036 	EXP 	unnamed Rect: autoDraw = True
+44.5370 	EXP 	unnamed Rect: autoDraw = True
+44.5708 	EXP 	unnamed Rect: autoDraw = True
+44.5708 	EXP 	unnamed Rect: autoDraw = False
+44.7713 	EXP 	New trial (rep=9, index=0): {u'Task': '2IFCnew'}
+44.8040 	EXP 	unnamed Rect: autoDraw = True
+44.9041 	EXP 	unnamed Rect: autoDraw = False
+45.1138 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+45.1378 	EXP 	Matrix: autoDraw = True
+45.2378 	EXP 	Matrix: autoDraw = False
+45.2378 	EXP 	unnamed TextStim: autoDraw = True
+45.6725 	DATA 	Keypress: y
+45.7046 	EXP 	unnamed TextStim: autoDraw = False
+45.7046 	EXP 	unnamed TextStim: autoDraw = True
+46.1381 	EXP 	unnamed TextStim: autoDraw = False
+46.2471 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+46.2716 	EXP 	Matrix: autoDraw = True
+46.3718 	EXP 	Matrix: autoDraw = False
+46.3718 	EXP 	unnamed TextStim: autoDraw = True
+46.8723 	DATA 	Keypress: y
+46.9052 	EXP 	unnamed TextStim: autoDraw = False
+46.9052 	EXP 	unnamed TextStim: autoDraw = True
+47.2732 	EXP 	unnamed TextStim: autoDraw = False
+47.3054 	EXP 	unnamed Rect: autoDraw = True
+47.3389 	EXP 	unnamed Rect: autoDraw = True
+47.3723 	EXP 	unnamed Rect: autoDraw = True
+47.4057 	EXP 	unnamed Rect: autoDraw = True
+47.4057 	EXP 	unnamed Rect: autoDraw = False
+47.6073 	EXP 	New trial (rep=10, index=0): {u'Task': '2IFCnew'}
+47.6394 	EXP 	unnamed Rect: autoDraw = True
+47.7392 	EXP 	unnamed Rect: autoDraw = False
+47.9476 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+47.9726 	EXP 	Matrix: autoDraw = True
+48.0726 	EXP 	Matrix: autoDraw = False
+48.0726 	EXP 	unnamed TextStim: autoDraw = True
+48.5402 	DATA 	Keypress: y
+48.5731 	EXP 	unnamed TextStim: autoDraw = False
+48.5731 	EXP 	unnamed TextStim: autoDraw = True
+48.9732 	EXP 	unnamed TextStim: autoDraw = False
+49.0810 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+49.1068 	EXP 	Matrix: autoDraw = True
+49.2069 	EXP 	Matrix: autoDraw = False
+49.2069 	EXP 	unnamed TextStim: autoDraw = True
+49.6408 	DATA 	Keypress: n
+49.6737 	EXP 	unnamed TextStim: autoDraw = False
+49.7073 	EXP 	unnamed Rect: autoDraw = True
+49.7406 	EXP 	unnamed Rect: autoDraw = True
+49.7739 	EXP 	unnamed Rect: autoDraw = True
+49.8072 	EXP 	unnamed Rect: autoDraw = True
+49.8072 	EXP 	unnamed Rect: autoDraw = False
+50.0078 	EXP 	New trial (rep=11, index=0): {u'Task': '2IFCnew'}
+50.0408 	EXP 	unnamed Rect: autoDraw = True
+50.1411 	EXP 	unnamed Rect: autoDraw = False
+50.3487 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+50.3742 	EXP 	Matrix: autoDraw = True
+50.4742 	EXP 	Matrix: autoDraw = False
+50.4742 	EXP 	unnamed TextStim: autoDraw = True
+51.0761 	DATA 	Keypress: y
+51.1082 	EXP 	unnamed TextStim: autoDraw = False
+51.1082 	EXP 	unnamed TextStim: autoDraw = True
+51.3751 	EXP 	unnamed TextStim: autoDraw = False
+51.4825 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+51.5086 	EXP 	Matrix: autoDraw = True
+51.6083 	EXP 	Matrix: autoDraw = False
+51.6083 	EXP 	unnamed TextStim: autoDraw = True
+52.2439 	DATA 	Keypress: y
+52.2757 	EXP 	unnamed TextStim: autoDraw = False
+52.2757 	EXP 	unnamed TextStim: autoDraw = True
+52.5089 	EXP 	unnamed TextStim: autoDraw = False
+52.5422 	EXP 	unnamed Rect: autoDraw = True
+52.5758 	EXP 	unnamed Rect: autoDraw = True
+52.6089 	EXP 	unnamed Rect: autoDraw = True
+52.6422 	EXP 	unnamed Rect: autoDraw = True
+52.6422 	EXP 	unnamed Rect: autoDraw = False
+52.8430 	EXP 	New trial (rep=12, index=0): {u'Task': '2IFCnew'}
+52.8759 	EXP 	unnamed Rect: autoDraw = True
+52.9759 	EXP 	unnamed Rect: autoDraw = False
+53.1839 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+53.2097 	EXP 	Matrix: autoDraw = True
+53.3096 	EXP 	Matrix: autoDraw = False
+53.3096 	EXP 	unnamed TextStim: autoDraw = True
+53.7102 	DATA 	Keypress: y
+53.7431 	EXP 	unnamed TextStim: autoDraw = False
+53.7431 	EXP 	unnamed TextStim: autoDraw = True
+54.2102 	EXP 	unnamed TextStim: autoDraw = False
+54.3180 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+54.3433 	EXP 	Matrix: autoDraw = True
+54.4452 	EXP 	Matrix: autoDraw = False
+54.4452 	EXP 	unnamed TextStim: autoDraw = True
+54.8440 	DATA 	Keypress: n
+54.8771 	EXP 	unnamed TextStim: autoDraw = False
+54.9108 	EXP 	unnamed Rect: autoDraw = True
+54.9440 	EXP 	unnamed Rect: autoDraw = True
+54.9773 	EXP 	unnamed Rect: autoDraw = True
+55.0112 	EXP 	unnamed Rect: autoDraw = True
+55.0112 	EXP 	unnamed Rect: autoDraw = False
+55.2114 	EXP 	New trial (rep=13, index=0): {u'Task': '2IFCnew'}
+55.2440 	EXP 	unnamed Rect: autoDraw = True
+55.3438 	EXP 	unnamed Rect: autoDraw = False
+55.5520 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+55.5777 	EXP 	Matrix: autoDraw = True
+55.6779 	EXP 	Matrix: autoDraw = False
+55.6779 	EXP 	unnamed TextStim: autoDraw = True
+56.1469 	DATA 	Keypress: y
+56.1798 	EXP 	unnamed TextStim: autoDraw = False
+56.1798 	EXP 	unnamed TextStim: autoDraw = True
+56.5817 	EXP 	unnamed TextStim: autoDraw = False
+56.6890 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+56.7126 	EXP 	Matrix: autoDraw = True
+56.8125 	EXP 	Matrix: autoDraw = False
+56.8125 	EXP 	unnamed TextStim: autoDraw = True
+57.7133 	EXP 	unnamed TextStim: autoDraw = False
+57.7458 	EXP 	unnamed Rect: autoDraw = True
+57.7809 	EXP 	unnamed Rect: autoDraw = True
+57.8124 	EXP 	unnamed Rect: autoDraw = True
+57.8459 	EXP 	unnamed Rect: autoDraw = True
+57.8459 	EXP 	unnamed Rect: autoDraw = False
+58.0466 	EXP 	New trial (rep=14, index=0): {u'Task': '2IFCnew'}
+58.0793 	EXP 	unnamed Rect: autoDraw = True
+58.1793 	EXP 	unnamed Rect: autoDraw = False
+58.3872 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+58.4130 	EXP 	Matrix: autoDraw = True
+58.5131 	EXP 	Matrix: autoDraw = False
+58.5131 	EXP 	unnamed TextStim: autoDraw = True
+59.0468 	DATA 	Keypress: y
+59.0808 	EXP 	unnamed TextStim: autoDraw = False
+59.0808 	EXP 	unnamed TextStim: autoDraw = True
+59.4136 	EXP 	unnamed TextStim: autoDraw = False
+59.5212 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+59.5470 	EXP 	Matrix: autoDraw = True
+59.6469 	EXP 	Matrix: autoDraw = False
+59.6469 	EXP 	unnamed TextStim: autoDraw = True
+60.1811 	DATA 	Keypress: n
+60.2144 	EXP 	unnamed TextStim: autoDraw = False
+60.2476 	EXP 	unnamed Rect: autoDraw = True
+60.2809 	EXP 	unnamed Rect: autoDraw = True
+60.3152 	EXP 	unnamed Rect: autoDraw = True
+60.3477 	EXP 	unnamed Rect: autoDraw = True
+60.3477 	EXP 	unnamed Rect: autoDraw = False
+60.5483 	EXP 	New trial (rep=15, index=0): {u'Task': '2IFCnew'}
+60.5808 	EXP 	unnamed Rect: autoDraw = True
+60.6809 	EXP 	unnamed Rect: autoDraw = False
+60.8889 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+60.9145 	EXP 	Matrix: autoDraw = True
+61.0147 	EXP 	Matrix: autoDraw = False
+61.0147 	EXP 	unnamed TextStim: autoDraw = True
+61.4495 	DATA 	Keypress: y
+61.4813 	EXP 	unnamed TextStim: autoDraw = False
+61.4813 	EXP 	unnamed TextStim: autoDraw = True
+61.9150 	EXP 	unnamed TextStim: autoDraw = False
+62.0234 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+62.0485 	EXP 	Matrix: autoDraw = True
+62.1485 	EXP 	Matrix: autoDraw = False
+62.1485 	EXP 	unnamed TextStim: autoDraw = True
+62.6165 	DATA 	Keypress: n
+62.6488 	EXP 	unnamed TextStim: autoDraw = False
+62.6823 	EXP 	unnamed Rect: autoDraw = True
+62.7159 	EXP 	unnamed Rect: autoDraw = True
+62.7489 	EXP 	unnamed Rect: autoDraw = True
+62.7823 	EXP 	unnamed Rect: autoDraw = True
+62.7823 	EXP 	unnamed Rect: autoDraw = False
+62.9830 	EXP 	New trial (rep=16, index=0): {u'Task': '2IFCnew'}
+63.0161 	EXP 	unnamed Rect: autoDraw = True
+63.1162 	EXP 	unnamed Rect: autoDraw = False
+63.3235 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+63.3496 	EXP 	Matrix: autoDraw = True
+63.4493 	EXP 	Matrix: autoDraw = False
+63.4493 	EXP 	unnamed TextStim: autoDraw = True
+64.3504 	EXP 	unnamed TextStim: autoDraw = False
+64.3504 	EXP 	unnamed TextStim: autoDraw = True
+64.5501 	EXP 	unnamed TextStim: autoDraw = False
+64.6578 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+64.6835 	EXP 	Matrix: autoDraw = True
+64.7835 	EXP 	Matrix: autoDraw = False
+64.7835 	EXP 	unnamed TextStim: autoDraw = True
+65.6848 	EXP 	unnamed TextStim: autoDraw = False
+65.7178 	EXP 	unnamed TextStim: autoDraw = True
+65.7511 	EXP 	unnamed TextStim: autoDraw = True
+65.7842 	EXP 	unnamed TextStim: autoDraw = True
+65.8178 	EXP 	unnamed TextStim: autoDraw = True
+65.8178 	EXP 	unnamed TextStim: autoDraw = False
+66.0183 	EXP 	New trial (rep=17, index=0): {u'Task': '2IFCnew'}
+66.0511 	EXP 	unnamed Rect: autoDraw = True
+66.1514 	EXP 	unnamed Rect: autoDraw = False
+66.3590 	EXP 	Created Matrix = ImageStim(autoLog=True, color=array([ 1.,  1.,  1.]), colorSpace=u'rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name=u'Matrix', opacity=1.0, ori=0.0, pos=array([ 0.,  0.]), size=array([64, 64]), texRes=256, units=u'pix', win=Window(...))
+66.3595 	DATA 	Keypress: p
+66.3595 	EXP 	Global key event: quit through p. Calling <function quit_exp at 0x00000000172364A8>.
+66.3850 	EXP 	Matrix: autoDraw = True
+66.3850 	EXP 	Matrix: autoDraw = False
+66.5438 	EXP 	window1: mouseVisible = True

@@ -1,0 +1,5 @@
+Task,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,time_response_second,response_2IFCnew,response_key2Interval_2IFCnew,signal_intensity,constant Value,response,time_response,signal_on_stimuluspos1,signal_on_stimuluspos2,stimulus_name_pos1,stimulus_name_pos2,random_intensity,date,expName,session,participant,
+2IFCnew,0,0,0,0,0.433561600003,5,Yes,11.0,-1,False Alarm,0.451457499999,False,True,stimulus_2IFCnew_2019_Jun_14_2318_1,stimulus_2IFCnew_2019_Jun_14_2318_2,False,2019_Jun_14_2318,2IFCnew,,,
+2IFCnew,1,0,1,0,0.400375500001,2,Yes,11.0,-1,Correct Rejection,0.383681200001,False,True,stimulus_2IFCnew_2019_Jun_14_2318_3,stimulus_2IFCnew_2019_Jun_14_2318_4,False,2019_Jun_14_2318,2IFCnew,,,
+2IFCnew,2,0,2,0,0.2501032,2,Yes,11.0,-1,Correct Rejection,0.452175799997,False,True,stimulus_2IFCnew_2019_Jun_14_2318_5,stimulus_2IFCnew_2019_Jun_14_2318_6,False,2019_Jun_14_2318,2IFCnew,,,
+2IFCnew,3,0,3,0,0.467911300002,1,No,11.0,-1,Hit,0.400802900003,True,False,stimulus_2IFCnew_2019_Jun_14_2318_7,stimulus_2IFCnew_2019_Jun_14_2318_8,False,2019_Jun_14_2318,2IFCnew,,,
