@@ -19,6 +19,7 @@ import math
 from scipy.misc import logsumexp
 import psignifit as ps
 from scipy.stats import binom
+from PIL import Image
 
 #import plotly
 #import plotly.plotly as py
@@ -79,7 +80,7 @@ def createListOfAllFilesInDic ():
     FileNames = []
     
     # Your path will be different, please modify the path below.
-    os.chdir(_thisDir + os.sep + r'data/creating')
+    os.chdir(_thisDir + os.sep + r'data/creating/JOSU')
     
     # Find any file that ends with ".xlsx"
     for files in os.listdir("."):
@@ -98,7 +99,7 @@ def GetFile(file_name):
 
     # Path to excel file
     # Your path will be different, please modify the path below.
-    location = _thisDir + os.sep + r'data/creating/' + file_name
+    location = _thisDir + os.sep + r'data/creating/JOSU/' + file_name
     # Parse the excel file
     # 0 = first sheet
     df = pd.read_csv(location)
@@ -148,6 +149,7 @@ def create_subdataset_for_participant (name, task):
 #    participant_data = participant_data.loc[participant_data['random_intensity'] == False]
     participant_data = participant_data.loc[participant_data['Task'] == task]
 #    print(participant_data.sum())
+    print(name)
     return participant_data
 
 def create_subdataset_for_participant2IFC (name):
@@ -160,7 +162,14 @@ def create_subdataset_for_participant2IFC (name):
     ########## calculate the propability of a correct answer for each signal Intesnity
     ########## Plots the Data-Points
     ########## Plots a Fiting curve
+def creatSub(data):
     
+    
+    participant_dataFalseAlarm = subData.loc[subData['response'] == 'False Alarm']
+    participant_dataNotCorrect = subData2IFC.loc[subData2IFC['response'] == 'wrong answer']
+    result = participant_dataFalseAlarm.append(participant_dataNotCorrect, ignore_index=True)
+    
+    return result
     
 def evaluationAndPlot2IFC (dataPlot):
     list_of_intensitys = dataPlot['signal_intensity'].value_counts().index.tolist()
@@ -539,7 +548,7 @@ def relProb2IFCnew(dataTwoIFC):
 #    listRelHit = []
 #    listRelFalseA = []
 #    listNGes = []
-
+    relevantArray = np.empty([len(list_of_intensitys),4], dtype=float)
     a=0
     for x in list_of_intensitys:
 #        relTwoHit = 0
@@ -568,7 +577,10 @@ def relProb2IFCnew(dataTwoIFC):
         cr = dataCR.shape[0]+dataCR2.shape[0]
         fa = dataFA.shape[0]+dataFA2.shape[0]
         miss = dataMiss.shape[0]+dataMiss2.shape[0]
-        
+        relevantArray[a][0] = ((hit + 0.5)/(hit + miss +1 ))
+        relevantArray[a][1] = hit + miss + 1
+        relevantArray[a][2] = (fa + 0.5)/ (fa + cr +1) 
+        relevantArray[a][3] = fa + cr + 1
         hitProbability = float(hit)/(hit + miss)
 
         faProbability = float(fa)/(fa + cr)
@@ -586,8 +598,9 @@ def relProb2IFCnew(dataTwoIFC):
 #        print ('%s DPRIME %s' % (a+1,dprime))
         dprimeString = str(dprime)
         printDprime = dprimeString[0:1]+','+dprimeString[2:len(dprimeString)-1]
-        print(printDprime)
+#        print(printDprime)
         a = a+1
+    return relevantArray
         
 #### achtung, verändert Reihenfolge, wenn funktion 1 ausgeführt dann funktion 2 ausführen 
         
@@ -721,6 +734,7 @@ def deePrimeYesNo (dataPerson):
     np.array(listMiss)
     np.array(listNGes)
     
+##########     nicht mehr nötig 
     for p in listHit:
         hitProbability = float(listHit[a])/(listHit[a]+listMiss[a])
 
@@ -739,7 +753,7 @@ def deePrimeYesNo (dataPerson):
 #        print ('%s DPRIME %s' % (a+1,dprime))
         dprimeString = str(dprime)
         printDprime = dprimeString[0:1]+','+dprimeString[2:len(dprimeString)-1]
-        print(printDprime)
+#        print(printDprime)
         a = a+1
         printDprime = 0
     return (relevantArray)
@@ -756,7 +770,7 @@ def DeePrime2IFC (dataPerson):
     #hits/ n ges da 1,2
     #fa / nges nicht da 3,4
 #    np.empty([len(sortiert),3], dtype=float)
-    relevantArray = np.empty([len(list_of_intensitys),4], dtype=int)
+    relevantArray = np.empty([len(list_of_intensitys),4], dtype=float)
     count = 0
     # for each signal intensity
     for x in smaltoBig:
@@ -806,11 +820,11 @@ def DeePrime2IFC (dataPerson):
         listCorrectR.append(CorrectR)
         listMiss.append(Miss)
         listNGes.append(Hit + FalseA + CorrectR + Miss + other)
-        print()
-        relevantArray[count][0] = Hit /(Hit + Miss)
-        relevantArray[count][1] = Hit + Miss
-        relevantArray[count][2] = FalseA /(FalseA + CorrectR)
-        relevantArray[count][3] = FalseA + CorrectR
+
+        relevantArray[count][0] = ((Hit + 0.5)/(Hit + Miss +1 ))
+        relevantArray[count][1] = Hit + Miss + 1
+        relevantArray[count][2] = (FalseA + 0.5)/ (FalseA + CorrectR +1) 
+        relevantArray[count][3] = FalseA + CorrectR + 1
         count = count +1  
     a = 0
     np.array(listHit)
@@ -838,7 +852,7 @@ def DeePrime2IFC (dataPerson):
         #print mit komma
         dprimeString = str(dprime)
         printDprime = dprimeString[0:1]+','+dprimeString[2:len(dprimeString)-1]
-        print(printDprime)
+#        print(printDprime)
         a = a+1
     return relevantArray
     
@@ -976,6 +990,7 @@ def reactionTime2IFCnew (data):
     
 def bootstrap(array):
 #    print(scipy.stats.binom.rvs(30,36))
+
     counter = 0
     dPrime = np.empty([8,1000])
     dPrimeTrue = 0
@@ -988,9 +1003,16 @@ def bootstrap(array):
     #    r = scipy.stats.binom.rvs()
         fa = binom.rvs(int(array[counter,3]), array[counter,2], size=1000)
     
-        dPrimeTrue = scipy.stats.norm.ppf((array[counter][1]*array[counter][0])/array[counter][1]) - scipy.stats.norm.ppf((array[counter][3]*array[counter][2])/array[counter][3])
+        dPrimeTrue = round(scipy.stats.norm.ppf((array[counter][1]*array[counter][0])/array[counter][1]) - scipy.stats.norm.ppf((array[counter][3]*array[counter][2])/array[counter][3]),2)
         local = 0
+        ### for Hit and FA Probability
         
+#        dprimeString = str((array[counter][1]*array[counter][0])/array[counter][1])
+#        hit =dprimeString[0:1]+','+dprimeString[2:len(dprimeString)]
+#        dprimeString =  str((array[counter][3]*array[counter][2])/array[counter][3])
+#        falseA = dprimeString[0:1]+','+dprimeString[2:len(dprimeString)]
+#        print(hit)
+#        print(falseA)
 #        r.sort()
 #        r=r[:974]
 #        r=r[24:]
@@ -998,13 +1020,15 @@ def bootstrap(array):
 
         for z in r :
              
-            dPrime[counter][local] = scipy.stats.norm.ppf(r[local]/array[counter][1]) - scipy.stats.norm.ppf(fa[local]/array[counter][3])
+            dPrime[counter][local] = round(scipy.stats.norm.ppf((r[local]+0.5)/(array[counter][1]+1)) - scipy.stats.norm.ppf((fa[local]+0.5)/(array[counter][3]+1)),2)
 #            print(dPrime[counter][local])
 
     #        print ('%s DPRIME %s' % (a+1,dprime))
 #            dprimeString = str(dprime)
 #            printDprime = dprimeString[0:1]+','+dprimeString[2:len(dprimeString)-1]
+
             local = local +1
+
         stepBetween = dPrime[counter,:]
         stepBetween.sort()
         h=0
@@ -1012,37 +1036,48 @@ def bootstrap(array):
         percentil975 = 974
         percentil025 = 24
 
-        for l in stepBetween:
-#            print(stepBetween[h])
-            if stepBetween[h] == math.inf:
-
-                stepBetween =  stepBetween[0:(h-1)]
-                percentil975 = round((len(stepBetween)*0.975),0)
-                percentil025 = round((len(stepBetween)*0.025),0)
-#                print(percentil975)
-                break
-#                print(percentil025)
-#                searching = False
-#            
-#            if h > len(stepBetween)-2:
-#                searching = False
-            if h > len (stepBetween)-2:
-#                searching = False
-                break
-            h = h+1
+#        for l in stepBetween:
+##            print(stepBetween[h])
+#            if stepBetween[h] == math.inf:
+#
+#                stepBetween =  stepBetween[0:(h-1)]
+#                percentil975 = round((len(stepBetween)*0.975),0)
+#                percentil025 = round((len(stepBetween)*0.025),0)
+##                print(percentil975)
+#                break
+##                print(percentil025)
+##                searching = False
+##            
+##            if h > len(stepBetween)-2:
+##                searching = False
+#            if h > len (stepBetween)-2:
+##                searching = False
+#                break
+#            h = h+1
 #        print(printDprime)
 #        r.sort()
+#        print(len(stepBetween))
         np.array(stepBetween)
 #        print(len(stepBetween))
-        print(str(counter)+ 'signalstärke')
-        print(dPrimeTrue)
-        print(stepBetween[int(percentil025)])
-        print(stepBetween[int(percentil975)])
+#        print(str(counter + 1 )+ 'signalstärke')
+        dprimeString = str(dPrimeTrue)
+        printDprime = dprimeString[0:1]+'.'+dprimeString[2:len(dprimeString)]
+        print(printDprime)
+        dprimeString = str(stepBetween[int(percentil025)])
+        per025 = dprimeString[0:1]+'.'+dprimeString[2:len(dprimeString)]
+        
+#        print(per025)
+        dprimeString = str(stepBetween[int(percentil975)])
+        per975 = dprimeString[0:1]+'.'+dprimeString[2:len(dprimeString)]
+#        print(per975)
+        print ('['+ per025 +','+ ' '+ per975 + ']')
+        ### for boxplot
         dPrimeBox[0][counter]=stepBetween[int(percentil025)]
         dPrimeBox[1][counter]=stepBetween[int(percentil975)]
         dPrimeBox[2][counter]= dPrimeTrue
 #        print(dPrime[counter][percentil975])
 #        plt.hist(fa)
+#        plt.hist(r)
 #        print(r[24],r[974])
         
     
@@ -1050,7 +1085,222 @@ def bootstrap(array):
         counter = counter +1
     
     df = pd.DataFrame(dPrimeBox, columns=stimulus)
-    df.plot.box(grid='True')
+    
+def makePictureOverAll(filteredData):
+    #filteredData muss False Alarms vom Yes-No-Task beinhalten
+    #sowie alle wrong answers vom 2IFC Task 
+
+    lengthOfData = 0
+
+    # pfad wo sich skript befindet
+    script_dir = os.path.dirname(__file__)
+    YesNoData = filteredData.loc[filteredData['expName'] == "Yes-No Task"]
+    twoIFCnewData = filteredData.loc[filteredData['expName'] == "2IFCnew"]
+    # Namen der False Alarm Bilder aus den Yes-No Task
+    pictureNames  = YesNoData['stimulus_name_pos1'].value_counts().index.tolist()
+    pictureNamesNew = twoIFCnewData['stimulus_name_pos1'].value_counts().index.tolist()
+    
+    twoIFCData = filteredData.loc[filteredData['expName'] == "2IFC"]
+
+    
+
+    #Wir haben nur wrong answers vom 2IFC Task übergeben, das heißt wir müssen schauen
+    #in welchem Intervall kein Signal war.
+    #Signal war im ersten Intervall --> also wurde mit wrong answer das zweite Intervall ausgewählt
+    twoIFCSecond = twoIFCData.loc[twoIFCData['signal_on_stimuluspos1'] == True]
+    #Speichere alle wrong anwer Bilder aus dem zweiten Interval ab (alle ohne Stimulus) 
+    pictureNamesSecond = twoIFCSecond['stimulus_name_pos2'].value_counts().index.tolist()
+    
+    #Signal war im zweiten Intervall --> also wurde bei wrong answer das erste Intervall ausgewählt
+    twoIFCFirst = twoIFCData.loc[twoIFCData['signal_on_stimuluspos1'] == False]
+    pictureNamesFirst = twoIFCFirst['stimulus_name_pos1'].value_counts().index.tolist()
+    
+    # Liste mit allen namen von Bildern die ein False Alarm bzw. wrong answer waren
+    combinedList = pictureNames + pictureNamesSecond + pictureNamesFirst + pictureNamesNew
+    print(len(combinedList))
+    #zum überprüfen
+#    print(len(pictureNames))
+#    print(len(pictureNamesSecond))
+#    print(len(pictureNamesFirst))
+#    print(len(combinedList))
+    
+    pictureNamesAr = np.array(combinedList)
+
+#    ###############
+    FileNames= []
+ 
+    # Pfad für die folgende Suche
+    os.chdir(_thisDir + os.sep + r'data/Fotos')
+
+    # findet jedes File, das mit .jpg endet
+    for files in os.listdir("."):
+
+        if files.endswith('.jpg'):
+
+            # letzen 4 zeichen .jpg
+            # werden zum Vergleich mit Bildernamen aus Datenframe Abgeschnitten
+            fileExpand = files[:-4]
+            
+            #Die Bildernamen im Datenframe haben zusätzlich noch die vorsilbe stimulus,
+            #im Gegensatz zu den abgespeicherten Namen
+            #Yes-No Bilder haben ein "_" zwischen vorsilbe stimulus und dem Dateinamen
+            filePlusStimulus = "stimulus_"+fileExpand
+            #2IFC Daten haben dies nicht
+            filePlusStimulustwoIFC = "stimulus"+fileExpand
+            
+            #Vergleicht Namen der Bilder aus Datenframe mit Namen der 
+            #Gesammelten .jpg datein, und Speichert die Namen der .jpg datein ab
+            
+            
+            #ausklammern um nur 2Ifc zu bekommen
+            if filePlusStimulus in pictureNamesAr:
+#                print ('ja')
+                FileNames.append(files)
+            ### bis hier
+                
+            
+            #### ausklammern um nur yes/no zu bekommen
+            if filePlusStimulustwoIFC in pictureNamesAr:
+#                print ('ja')
+                FileNames.append(files)
+            #### bis hier
+            
+    #mit wie vielen Bildern gearbeitet wird       
+    lengthOfData = len(FileNames)
+    counter = 0
+    
+    #leere Matritzen zum rechnen
+    returnRGBMatrix = np.zeros(
+        (64,64,3),
+        dtype=np.uint8)
+    RGBMatrix = np.zeros(
+        (64,64,3),
+        dtype=np.uint8)
+    imgpre = np.zeros(
+        (64,64,3),
+        dtype=np.uint8)
+        
+    #Matrix voll mit der Anzahl an Bildern die berücksichtigt werden
+    divideRGBMatrix = np.full(
+        (64,64,3),lengthOfData)
+    
+    #Schleife welche jedes Bild auswertet und aufsummiert
+    while counter < lengthOfData:
+        rel_path = 'data/creating/Fotos/' +FileNames[counter]
+        #erstellt Pfad zum Bild
+        image_path = os.path.join(script_dir, rel_path)
+        # img hält das geladene Bild
+        img = Image.open(image_path)
+        # holt die Pixelwerte und speichert diese in pixels ab
+        pixels = np.asarray(img)
+        
+        # wird benötigt um mit der Pixelmatrix zu arbeiten
+        pixels.setflags(write=1)
+        
+        #teilet den Pixelwert durch die Gesammtzahl der Bilder
+        RGBMatrix = np.divide(pixels,divideRGBMatrix)
+        #addiere RGBMatrix auf die returnRGBMatrix
+        returnRGBMatrix = RGBMatrix + returnRGBMatrix
+        counter = counter + 1
+    
+    #Umwandlung und Speicherung des Ergebnisbildes
+    imgpre = np.round_(returnRGBMatrix, decimals=0)
+#    print(imgpre)
+    b = np.uint8(imgpre)
+    img = Image.fromarray(b)
+    img.save(_thisDir + os.sep + '/FotoOverall' + ".jpg", "JPEG", quality=100)
+    
+    #Kontrast erhöhen möglich, bis zu 4 verschiedene Kontraständerungen möglich
+    #hier spielerreien möglich wie/ wann eingefärbt wird und wie stark
+    grater = np.where(imgpre[:, :, 0] > 127)
+#    grater2 = np.where(imgpre[:, :, 0] > 129)
+    smaler = np.where(imgpre[:, :, 0] < 128)
+#    smaler2 = np.where(imgpre[:, :, 0] < 127)
+#    same = np.where(imgpre[:, :, 0] == 128)
+#    
+    #Speichert für jeden gefundenen Pixelwert seine x und y position ab
+    graterX = grater[0]
+    graterY = grater [1]
+    smalerX = smaler [0]
+    smalerY = smaler [1]
+#    graterX2 = grater2[0]
+#    graterY2 = grater2 [1]
+#    smalerX2 = smaler2 [0]
+#    smalerY2 = smaler2 [1]
+#    sameX = same [0]
+#    sameY = same [1]
+    i = 0
+        #Pixelwert an position x,y wird genommen und erhöht
+#    while i < len(sameX):
+#           imgpre[sameX[i],sameY[i],0] = imgpre[sameX[i],sameY[i],0] + 100
+#           imgpre[sameX[i],sameY[i],1] = imgpre[sameX[i],sameY[i],1] + 100
+#           imgpre[sameX[i],sameY[i],2] = imgpre[sameX[i],sameY[i],2] + 100
+#           i = i+1 
+    i = 0 
+    #Pixelwert an position x,y wird genommen und erhöht
+    while i < len(graterX):
+           imgpre[graterX[i],graterY[i],0] = imgpre[graterX[i],graterY[i],0] + 100
+           imgpre[graterX[i],graterY[i],1] = imgpre[graterX[i],graterY[i],1] + 100
+           imgpre[graterX[i],graterY[i],2] = imgpre[graterX[i],graterY[i],2] + 100
+           i = i+1 
+    i = 0 
+#    #bzw. verringert
+    while i < len(smalerX):
+           imgpre[smalerX[i],smalerY[i],0] = imgpre[smalerX[i],smalerY[i],0] - 100
+           imgpre[smalerX[i],smalerY[i],1] = imgpre[smalerX[i],smalerY[i],1] - 100
+           imgpre[smalerX[i],smalerY[i],2] = imgpre[smalerX[i],smalerY[i],2] - 100
+           i = i+1    
+##    i = 0 
+#    while i < len(graterX2):
+#           imgpre[graterX2[i],graterY2[i],0] = imgpre[graterX2[i],graterY2[i],0] + 50
+#           imgpre[graterX2[i],graterY2[i],1] = imgpre[graterX2[i],graterY2[i],1] + 50
+#           imgpre[graterX2[i],graterY2[i],2] = imgpre[graterX2[i],graterY2[i],2] + 50
+#           i = i+1 
+#    i = 0 
+#    while i < len(smalerX2):
+#           imgpre[smalerX2[i],smalerY2[i],0] = imgpre[smalerX2[i],smalerY2[i],0] - 50
+#           imgpre[smalerX2[i],smalerY2[i],1] = imgpre[smalerX2[i],smalerY2[i],1] - 50
+#           imgpre[smalerX2[i],smalerY2[i],2] = imgpre[smalerX2[i],smalerY2[i],2] - 50
+           
+#    while i < len(sameX):
+#           imgpre[sameX[i],sameY[i],0] = 255
+#           imgpre[sameX[i],sameY[i],1] = 108
+#           imgpre[sameX[i],sameY[i],2] = 0
+#           i = i+1 
+#    i = 0 
+#    #Pixelwert an position x,y wird genommen und erhöht
+#    while i < len(graterX):
+#           imgpre[graterX[i],graterY[i],0] = 255
+#           imgpre[graterX[i],graterY[i],1] = 54
+#           imgpre[graterX[i],graterY[i],2] = 0
+#           i = i+1 
+#    i = 0 
+#    #bzw. verringert
+#    while i < len(smalerX):
+#           imgpre[smalerX[i],smalerY[i],0] = 255
+#           imgpre[smalerX[i],smalerY[i],1] = 161
+#           imgpre[smalerX[i],smalerY[i],2] = 0
+#           i = i+1    
+#    i = 0 
+#    while i < len(graterX2):
+#           imgpre[graterX2[i],graterY2[i],0] = 255
+#           imgpre[graterX2[i],graterY2[i],1] = 0
+#           imgpre[graterX2[i],graterY2[i],2] = 0
+#           i = i+1 
+#    i = 0 
+#    while i < len(smalerX2):
+#           imgpre[smalerX2[i],smalerY2[i],0] = 255
+#           imgpre[smalerX2[i],smalerY2[i],1] = 215
+#           imgpre[smalerX2[i],smalerY2[i],2] = 0
+#           i = i+1
+    
+    #Speichert Foto ab
+    b = np.uint8(imgpre)
+    img = Image.fromarray(b)
+    img.save(_thisDir + os.sep + '/FotoOverallKontrast' + ".jpg", "JPEG", quality=100)
+    
+    return FileNames
+#    df.plot.box(grid='True')
 #    df = pd.DataFrame(np.random.rand(10, 5), columns=['A', 'B', 'C', 'D', 'E'])
 #    print(np.random.rand(10, 5))
 #    df.plot.box(grid='True')
@@ -1116,19 +1366,19 @@ big_df = pd.concat(df_list)
 ### fuctions above work with subData
 ### File einlesen 
 
-dataInload = GetFile('CorrectedData2IFC.csv')
-#print(dataInload.shape)
-
-subData = dataInload[dataInload['trials.thisRepN'] > 4]
-#g=subData.corr(method='pearson')
-#print(g)
-
-#print(subData.shape)
-### aktuell nicht benutzt
-#subData = big_df.loc[big_df['expName'] == "Yes-No Task"]
-#subData = big_df.loc[big_df['expName'] == "2IFC"]
-subData2IFC = subData.loc[subData['expName'] == "2IFCnew"]
-subData2IFCnew = big_df.loc[big_df['expName'] == "2IFCnew"]
+#dataInload = GetFile('CorrectedData2IFC.csv')
+##print(dataInload.shape)
+#
+#subData = dataInload[dataInload['trials.thisRepN'] > 4]
+##g=subData.corr(method='pearson')
+##print(g)
+#
+##print(subData.shape)
+#### aktuell nicht benutzt
+##subData = big_df.loc[big_df['expName'] == "Yes-No Task"]
+##subData = big_df.loc[big_df['expName'] == "2IFC"]
+#subData2IFC = subData.loc[subData['expName'] == "2IFCnew"]
+#subData2IFCnew = big_df.loc[big_df['expName'] == "2IFCnew"]
 
 #reactionTime2IFCnew(subData2IFC)
 
@@ -1136,12 +1386,15 @@ subData2IFCnew = big_df.loc[big_df['expName'] == "2IFCnew"]
 
 #### plot für versuchsperson
 
-nameVpn = 'WOAN27'
+#makePictureOverAll(creatSub(subData))
+#nameVpn = 'HACA03'
 #print(DeePrime2IFC (create_subdataset_for_participant(nameVpn,"2IFC")))
 #print(deePrimeYesNo (create_subdataset_for_participant(nameVpn,"Yes-No Task")))
-bootstrap(deePrimeYesNo (create_subdataset_for_participant(nameVpn,"Yes-No Task")))
-bootstrap(deePrimeYesNo (create_subdataset_for_participant(nameVpn,"2IFCnew")))
-#
+#bootstrap(deePrimeYesNo (create_subdataset_for_participant(nameVpn,"Yes-No Task")))
+#bootstrap(deePrimeYesNo (create_subdataset_for_participant(nameVpn,"2IFCnew")))
+#bootstrap(relProb2IFCnew (create_subdataset_for_participant(nameVpn,"2IFCnew")))
+#bootstrap(DeePrime2IFC (create_subdataset_for_participant(nameVpn,"2IFC")))
+##
 #VPNs = ['RORE28','JOSU26','WOAN27','KLRU16','DIAN07','MIJA04','TOSY08','HACA03']
 #
 #
@@ -1240,69 +1493,69 @@ bootstrap(deePrimeYesNo (create_subdataset_for_participant(nameVpn,"2IFCnew")))
 
 ##############
 #dataOne = evaluationAndPlot (create_subdataset_for_participant (nameVpn))
-##dataOne = evaluationAndPlot (big_df)
-##dataOne = evaluationAndPlot (subData)
-#options             = dict() 
-#options['expType']     = 'nAFC'   # choose 2-AFC as the experiment type  
-#options['expN']          = 2 
-#options2             = dict() 
-#options2['expType']     = 'nAFC'   # choose 2-AFC as the experiment type  
-#options2['expN']          = 2 
-#options3             = dict() 
-#options3['expType']     = 'nAFC'   # choose 2-AFC as the experiment type  
-#options3['expN']          = 2 
-#options4             = dict() 
-#options4['expType']     = 'nAFC'   # choose 2-AFC as the experiment type  
-#options4['expN']          = 2 
-#options5             = dict() 
-#options5['expType']     = 'nAFC'   # choose 2-AFC as the experiment type  
-#options5['expN']          = 2 
-#options6             = dict() 
-#options6['expType']     = 'nAFC'   # choose 2-AFC as the experiment type  
-#options6['expN']          = 2 
-#options7             = dict() 
-#options7['expType']     = 'nAFC'   # choose 2-AFC as the experiment type  
-#options7['expN']          = 2 
-#options8             = dict() 
-#options8['expType']     = 'nAFC'   # choose 2-AFC as the experiment type  
-#options8['expN']          = 2 
-# 
-###### IMMER EINS AUSKOMMENTIEREN ERSTEN WERT ABLESEN UND NOCHMAL RUN ########
-#
-#options['threshPC']   = 0.1 # 0.55
-#options2['threshPC']   = 0.2 # 0.60
-#options3['threshPC']   = 0.3 # 0.65
-#options4['threshPC']   = 0.4 # 0.7
-#options5['threshPC']   = 0.5 # 0.75
-#options6['threshPC']   =  0.6 #0.8
-#options7['threshPC']   =  0.7 #0.85
-#options8['threshPC']   = 0.8 # 0.9
-#
-#
-#######
-#
-#resultOne = ps.psignifit(dataOne, options)
-#resultTwo = ps.psignifit(dataOne, options2)
-#resultThree = ps.psignifit(dataOne, options3)
-#resultFour = ps.psignifit(dataOne, options4)
-#resultFive = ps.psignifit(dataOne, options5)
-#resultSix = ps.psignifit(dataOne, options6)
-#resultSeven = ps.psignifit(dataOne, options7)
-#resultEight = ps.psignifit(dataOne, options8)
-#
-#result = dict()
-#
-##result['conf_Intervals']
-#ps.psigniplot.plotPsych(resultFour)
-#ps.psigniplot.plotPsych(resultTwo)
-#ps.psigniplot.plotPsych(resultOne)
-#ps.psigniplot.plotPsych(resultThree)
-#
-#ps.psigniplot.plotPsych(resultFive)
-#ps.psigniplot.plotPsych(resultSix)
-#
-#ps.psigniplot.plotPsych(resultSeven)
-#ps.psigniplot.plotPsych(resultEight)
+dataOne = evaluationAndPlot (big_df, False, "Yes-No Task")
+#dataOne = evaluationAndPlot (subData)
+options             = dict() 
+options['expType']     = 'nAFC'   # choose 2-AFC as the experiment type  
+options['expN']          = 2 
+options2             = dict() 
+options2['expType']     = 'nAFC'   # choose 2-AFC as the experiment type  
+options2['expN']          = 2 
+options3             = dict() 
+options3['expType']     = 'nAFC'   # choose 2-AFC as the experiment type  
+options3['expN']          = 2 
+options4             = dict() 
+options4['expType']     = 'nAFC'   # choose 2-AFC as the experiment type  
+options4['expN']          = 2 
+options5             = dict() 
+options5['expType']     = 'nAFC'   # choose 2-AFC as the experiment type  
+options5['expN']          = 2 
+options6             = dict() 
+options6['expType']     = 'nAFC'   # choose 2-AFC as the experiment type  
+options6['expN']          = 2 
+options7             = dict() 
+options7['expType']     = 'nAFC'   # choose 2-AFC as the experiment type  
+options7['expN']          = 2 
+options8             = dict() 
+options8['expType']     = 'nAFC'   # choose 2-AFC as the experiment type  
+options8['expN']          = 2 
+ 
+##### IMMER EINS AUSKOMMENTIEREN ERSTEN WERT ABLESEN UND NOCHMAL RUN ########
+
+options['threshPC']   = 0.1 # 0.55
+options2['threshPC']   = 0.2 # 0.60
+options3['threshPC']   = 0.3 # 0.65
+options4['threshPC']   = 0.4 # 0.7
+options5['threshPC']   = 0.5 # 0.75
+options6['threshPC']   =  0.6 #0.8
+options7['threshPC']   =  0.7 #0.85
+options8['threshPC']   = 0.8 # 0.9
+
+
+######
+
+resultOne = ps.psignifit(dataOne, options)
+resultTwo = ps.psignifit(dataOne, options2)
+resultThree = ps.psignifit(dataOne, options3)
+resultFour = ps.psignifit(dataOne, options4)
+resultFive = ps.psignifit(dataOne, options5)
+resultSix = ps.psignifit(dataOne, options6)
+resultSeven = ps.psignifit(dataOne, options7)
+resultEight = ps.psignifit(dataOne, options8)
+
+result = dict()
+
+#result['conf_Intervals']
+ps.psigniplot.plotPsych(resultFour)
+ps.psigniplot.plotPsych(resultTwo)
+ps.psigniplot.plotPsych(resultOne)
+ps.psigniplot.plotPsych(resultThree)
+
+ps.psigniplot.plotPsych(resultFive)
+ps.psigniplot.plotPsych(resultSix)
+
+ps.psigniplot.plotPsych(resultSeven)
+ps.psigniplot.plotPsych(resultEight)
 #
 #
 #print("Hier den Wert ablesen 0.55%:")
